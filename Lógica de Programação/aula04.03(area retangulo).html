@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lógica de Programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Cálculo</h1>
+
+    <button onclick="Calcular()">Calcular Alert</button>
+    <button onclick="Calcular2()">Calcular output</button>
+
+    <div id="output"></div>
+    <script>
+        //Alert
+        function Calcular() {
+            var base = parseFloat(prompt("Informe a base:"));
+
+            var altura = parseFloat(prompt("Informe a altura:"));
+
+            alert("Alert, área total: " + CalcularArea(base, altura));
+        }
+        //Output
+        function Calcular2() {
+            var base = parseFloat(prompt("Informe a base:"));
+
+            var altura = parseFloat(prompt("Informe a altura:"));
+
+            //var area = CalcularArea(base,altura);
+            document.querySelector("#output").innerHTML = 'Output, área total: ' + CalcularArea(base, altura);
+        }
+
+        function CalcularArea(base, altura) {
+            return base * altura;
+        }
+    </script>
+</body></html>

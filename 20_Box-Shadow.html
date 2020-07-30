@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>20 - CSS: Box - Shadow </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Introdução sobre a utilização do CSS">
+    <meta name="keywords" content="html, css, form, forms, tecnologia">
+    <style>
+        #radius{
+            background-color: darkorange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            /*Com o border radius podemos moldar as bordas apartir dos eixos X e Y*/
+            border-radius: 50px 100px / 100px 50px;
+            /*Utilizamos o box-shadow para criar sombra, onde os valores correspondem respectivamente ao: eixo X , eixo Y, esfumaçamento, tamanho da sombra e cor*/
+            box-shadow: 10px 10px 10px 5px #999;
+        }
+        h1{
+            font-family: sans-serif;
+            text-shadow: -10px 10px 10px black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Efeitos</h1>
+
+    <div id="radius"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>22 - CSS: Fonte-face </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Introdução sobre a utilização do CSS">
+    <meta name="keywords" content="html, css, form, forms, tecnologia">
+    <style>
+        /*Para inserir uma nova fonte para visualização do usuário utilizamos a diretiva @font-face*/
+        @font-face{
+            font-family: 'nadia';
+            /*Em seguida passamos o surse ou a localização para o arquivo da font para importação*/
+            src: url(Font/nadia/nadia-serif.ttf);
+            /*Para informar o formato para download do tipo de browser específico*/
+            src: url(Font/nadia/nadia-serif.woff) format('woff'),
+                url(Font/nadia/nadia-serif.eot) format('truetype'),
+                url(Font/nadia/nadia-serif.svg) format('svg');
+                
+            
+        }
+        h1{
+            /*Em seguida vamos chamar a font para utilização*/
+            font-family: nadia;    
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Fontes Customizadas</h1>
+    
+    <div id="radius"></div>
+  
+</body>
+
+</html>

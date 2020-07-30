@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <style>
+            body{
+                font-family: sans-serif;
+            }
+
+            label{
+                margin-right: 25px;
+            }
+
+            label span{
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                background: #eee;
+                border: solid 2px #bbb;
+                border-radius: 15px;
+            }
+
+            label span:after{
+                content: '';
+                display: block;
+                background: #ddd;
+                border: 1px solid #bbb;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                margin-top: 4px;
+                margin-left: 2px;
+                transition: all .2s ease-in-out;
+                box-sizing: border-box;
+            }
+
+            label input:checked + span:after{
+                transform: translateX(30px);
+                background: #2677d6;
+            }
+
+            label input:focus + span{
+                box-shadow: 0 0 0 2px #2677d6;
+            }
+
+            input{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>estrutura basica</h1>
+
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Esporte
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Politica
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <span></span>
+            educação
+        </label>
+    </body>
+</html>

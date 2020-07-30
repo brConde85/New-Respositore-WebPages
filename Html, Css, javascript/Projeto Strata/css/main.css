@@ -1,0 +1,472 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgba(96, 95, 95, 0.94);
+    /*Define espaçamento entre as linhas do texto*/
+    line-height: 1.6;
+}
+
+a{
+    transform-style: flat;
+    transition-duration: .4s;
+    transition-property: color, border;    
+    border-bottom: 2px dashed;
+    text-decoration: none;
+    color: #49bf9d;
+}
+    a:hover{
+        border-bottom: 1px transparent;        
+        transition-duration: .2s;
+        transition-property: color, border;
+        transition-timing-function: ease-in-out;    
+    }
+
+p{
+    0 0 2em;    
+}
+
+img{
+    /*Para imagem se formatar de acordo com seu tamanho
+    original não ultrapassando */
+    max-width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main-header-link img{
+    border-radius: 50%;    
+    box-shadow: 0px 0px 15px #121111;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #787878;
+    font-weight: normal;
+    /*Unidade de medida 'em' utilizada para 
+    diferenciar o espaçamento proporcional  
+    de acordo com a formatação do elemento*/
+    margin 1em 0;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 26px;
+}
+
+h4{
+    font-size: 22px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h6{
+    font-size: 14px;
+}
+
+
+sup, sub{
+    font-size: 13px;
+}
+
+blockquote{
+    border-left: solid 5px #ccc;
+    /*com em significa que eles são relativos 
+    ao tamanho da fonte e se o usuário tem uma 
+    fonte grande (ex. uma tela grande) ou uma 
+    fonte pequena (ex. dispositivo handheld) , 
+    os tamanhos serão proporcionais. */
+    padding: .5em 0 .5em 1.5em;
+    margin: 3em 0;
+}
+
+blockquote p{
+    margin-bottom: 5px;
+}
+blockquote p:last-child{
+    margin-bottom: 0;    
+}
+blockquote p:first-child{
+    margin-top: 0;
+}
+
+code{
+    border: 1px #c4c4c4 solid;
+    border-radius: 5px;
+    background-color: #efefef;    
+    font-size: .9em;
+    padding: .25em .65em;
+    font-family: 'courier new', monospace;
+    color: #929292;
+    font-weight:  bold;
+}
+
+pre code{
+    /*Utilizado para separar os elementos do code que
+    estavam em linha para ocupar todo um conjunto da
+    a estrutura  formando um bloco*/
+    display: block;
+    margin-top: -30px;
+}
+
+ol, ul{
+    margin: 0;
+    padding: 0;
+    padding-left: 1.1em;
+    list-style-position: inherit;
+}
+li{
+    padding-left: .5em;
+}
+
+.ul-alternate{
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.ul-alternate li{
+    border-bottom: solid #e2e2e2 3px;
+    padding-bottom: 8px;
+    padding-left: 0;    
+}
+/*Utilização de uma pseudo-classe 'last-child'
+para pegar a última li da lista para aplicar 
+uma regra diferente das demais*/
+.ul-alternate li:last-child{
+    border: none;    
+}
+
+.ul-icons{
+    list-style-type: none;    
+    padding-left: 0;    
+}
+/*Faz com que possamos retirar um texto do tipo 
+<span> do html mas que ele possa ser  acessível 
+para pessoas que necessitam do browser para leitura
+por questões de acessibilidade.*/
+.icon-hidden{
+    color: transparent;    
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;    
+}
+
+.ul-icons li{
+    display: inline-flex;
+    color:  #49bf9d;
+    font-size: 25px;
+    margin:0;
+    padding-left: 0;
+    padding-right: .5em;
+}
+
+.main-header{    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;    
+    padding: 125px 54px 72px;
+    /*Para respeitar a borda ou alinhamento*/
+    box-sizing: border-box;
+    background-image: url(../imagens/overlay.png), url(../imagens/bg.jpg);
+    background-position: left top;
+    /*Virgula para separar definições para as duas imagens*/
+    background-size: auto, cover;
+    text-align: right;
+}
+
+.main-header-title{    
+    line-height: 1.4;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.63);
+    font-weight: normal;
+}
+
+.main-header-title strong{
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.main-header-link{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+    .main-header-link:hover, .main-header-link:active{       
+        font-weight: bold;
+        color: #49bf9d;        
+        text-shadow: 2px 2px 8px white;       
+    }
+
+.main-header-link-img, .recent-works-card{
+    border: 0;   
+}
+
+.imagem-link{
+    border: 0;    
+}
+
+.img-left{
+    float:left;
+    box-sizing: border-box;
+    margin: .5em;
+}
+
+.img-right{
+    float: right;
+    box-sizing: border-box;
+    margin: .5em;
+}
+
+.main-content{    
+    width: 65%;
+    margin-left: 35%;
+    padding: 124px 54px 72px;
+    box-sizing: border-box;
+}
+
+.row{
+    /*Utilização de 'overflow: auto' para que a row
+    consiga identificar a altura das colunas ou da
+    classe col-2 automaticamente*/
+    overflow: auto;
+}
+
+.col-2{
+    width: 48%;
+    /*Para separar as colunas em duas*/
+    float: left;
+}
+.col-2:first-child{
+    margin-right: 2%;
+}
+.col-2:last-child{
+    margin-left: 2%;
+}
+
+.col-2-3{
+    width: 65%;
+    float: left;    
+}
+
+.col-1-3{
+    width: 32%;
+    float: left;    
+    margin-left: 3%;
+    padding-top: 1%;
+}
+
+/*pega os multiplos de 3 menos 1 ou seja 2º, 5º, 8º
+.col-1-3:nth-child(3n-1){ 
+    margin: 0 1.253%;    
+}*/
+
+/*pega os multiplos de 3 menos 2 ou seja 1º, 4º, 7º*/
+.col-1-3:nth-child(3n-2){
+    margin-right: 1.24%;
+     box-sizing: border-box;
+}
+
+.col-1-3:nth-child(3n){
+    margin-left: 1.24%;
+     box-sizing: border-box;
+}
+
+/*Pega o elemento imediatamente apos o selecionado*/
+.col-2-3 + .col-1-3, col-1-3 + .col-2-3{
+    margin-left: 2%;
+}
+
+input, label, textarea, select{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input, textarea, select{
+    background-color: #eee;
+    padding: 15px;
+    border: 2.5px transparent solid;
+    border-radius:5px;
+    margin-bottom: 15px;
+}
+
+textarea{
+    height: 10em;
+}
+
+/*Para selecionar um atributo especifico 
+para modificação*/
+input[type="radio"], input[type="checkbox"]{
+    width: auto;
+    margin: .4em;
+}
+
+input:focus, textarea:focus, select:focus{
+    border: 2.5px #49bf9d solid; 
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn-default{
+    border: 2px solid #49bf9d;
+    background-color: #49bf9d;
+    color: whitesmoke;
+    padding: 12px 45px;    
+    border-radius: 5px;
+    transition: linear .4s all;
+    font-size: .9em;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-default:hover{
+    background-color: rgba(73, 191, 157, 0.78);
+    border: 2px solid transparent;
+    color: whitesmoke;
+    transition: linear .4s all;
+}
+
+.btn-default-stroke{
+    background-color: white;
+    border-color:#efefef;
+    color:inherit;
+    border-radius: 5px;
+    padding: 12px 45px;
+    font-size: .9em;
+}
+
+.btn-default-stroke:hover{   
+    color: #49bf9d;
+    transition: linear .4s all;
+    border: 2px solid #49bf9d;
+    background-color:  white;
+}
+
+.btn-default-small{
+    font-size: .65em;
+}
+
+.btn-default-full{
+    display: block;    
+    width: 60%;
+    text-align: center;
+    margin-top: .99em;
+}
+
+.table{
+    width: 100%;
+    margin: 0 0 2em;
+    border-collapse: collapse;
+    text-align: left;
+    
+}
+
+.table th{
+    background-color: #efefef;
+    padding: .5em;
+}
+
+.table td{
+    padding: .5em;
+}
+
+.table tbody tr td{
+    border-bottom: 1.5px solid #969292;
+}
+
+.table tbody tr:first-child td{
+    border-top: 2px solid #767373;
+    /*para manipular elementos no corpo da tabela
+    apenas a primeira linha*/
+}
+.table tbody tr:last-child td{
+    border-bottom: 2px solid #767373;
+    /*para manipular elementos no corpo da tabela
+    apenas a última linha*/
+}
+.table tbody tr:nth-child(odd){
+    background-color: #ccc;
+}
+
+.table-alternate tbody td,.table-alternate tbody tr:first-child,
+.table-alternate tbody tr:last-child{
+    border: 1.5px solid #bbb;
+    
+}
+
+.aling-text-avatar{
+    text-align: justify;
+    margin: .5em;
+}
+
+.gallery-img img{
+    width: 100%;
+    height: 80%;    
+}
+
+.gallery-thumb img, .gallery-img img{
+    margin-bottom: 2%;
+    display: inline-block;
+    border-radius: 5px;    
+}
+    
+.gallery-thumb img{
+    width: 32.5%;
+    margin: 0;    
+    box-sizing: border-box;
+    
+}
+
+.main-footer{     
+    position: fixed;
+    width: 35%;
+    left: 0;
+    bottom: 0;      
+    padding: 0 54px 72px 0;  
+    text-align: right;
+}
+
+.main-footer .ul-icons{
+    padding-right: 90px;;
+}
+
+
+.main-footer .ul-icons a{    
+    border: transparent;
+    color: rgba(128, 128, 128, 0.77);   
+}     
+
+.copyright{
+    color: whitesmoke;
+    padding-right: 100px;
+    text-shadow: -1px 1px 0 #5d5d5d,
+    -2px 2px 0 #727272;
+    
+
+}
+
+.copyright li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.copyright a{    
+    color:inherit;
+    transition: all .5s; 
+}

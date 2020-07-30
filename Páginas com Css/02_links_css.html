@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>02 Links Html</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Bruno Luiz">
+	<meta  name="descriptions" content="Descrição sobre a página">
+	<meta  name="keywords" content="Html5,css, java script, tecnologia" >
+	<style>
+		body{
+				background-color: gray;
+		}
+
+		p, li, a, h1, h2{
+					font-family: sans-serif;
+		}
+
+		a{
+			color: green;
+		}		
+			a:hover{
+				color: darkgreen;
+				background-color: darkgray;
+			}
+			a:visited{
+				color: yellow;
+			}
+			a:active{
+				color:black;
+			}
+			/*Formata toda li, mas apenas as queestiverem dentro de uma ul*/
+		ul li{
+			list-style-type: circle;
+		}
+
+		ol li{
+			list-style-type: lower-latin;
+			list-style-position: inside;
+		}	
+
+	</style>
+</head>
+<body>
+	<h1>Título 01</h1>
+	<h2>Subtítulo</h2>
+	<hr>
+
+	<a href="_Pag01.html" target="_blank">01 teste</a> |
+	<a href="_Pag01testando.html" target="_blank">02 teste</a>
+	<hr>
+	<ul>
+		<li>item 01</li>
+		<li>item 02</li>
+		<li>item 03</li>
+	</ul>
+	<ol>
+		<li>item 01</li>
+		<li>item 02</li>
+		<li>item 03</li>
+	</ol>
+</body>
+</html>

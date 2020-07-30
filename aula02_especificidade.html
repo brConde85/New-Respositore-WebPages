@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Porquê Meu CSS Não Funciona</title>
+    <meta charset="utf-8">
+
+    <style>
+
+        .jumbotron{
+            background: rgba(0,0,0,.5);
+        }
+
+        .jumbotron__text{
+            color: white;
+        }
+
+        .jumbotron__title{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Meu CSS não funciona</h1>
+
+<!-- Atalho -> div#jumbotron>h2{subtitulo}+p{paragrafos}*2-->
+    <div class="jumbotron">
+        <h2 class="jumbotron__title">subtitulo</h2>
+        <p class="jumbotron__text">paragrafos</p>
+        <p class="jumbotron__text">paragrafos</p>
+    </div>
+
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto dicta a illo ipsam. Nemo dolorum dolore atque modi delectus quod ratione ullam voluptatibus alias, vel et necessitatibus voluptatum fuga.</p>
+    <p class="destaque" id="unico">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto dicta a illo ipsam. Nemo dolorum dolore atque modi delectus quod ratione ullam voluptatibus alias, vel et necessitatibus voluptatum fuga.</p>
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto dicta a illo ipsam. Nemo dolorum dolore atque modi delectus quod ratione ullam voluptatibus alias, vel et necessitatibus voluptatum fuga.</p>
+</body>
+
+</html>

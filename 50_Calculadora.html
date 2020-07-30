@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+    <title>08 Inclusão de imagens</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno Luiz Panho Marciano">
+    <meta name="description" content="Bela descrição sobre adição de imagens">
+    <meta name="keywords" content="imagens, css, html">
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            text-align: justify;
+        }
+
+        #calculadora {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(5, 1fr);
+            grid-gap: .8em;
+
+            background-image: linear-gradient(#aaa, #bbb);
+            width: 30%;
+            height: 30%;
+            border: 2px #aaa solid;
+            padding: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+            box-shadow: inset 0 0 10px rgb(0, 0, 0);
+            margin: 15px auto;
+            padding: 1.5em;
+        }
+
+        button {
+            border-radius: 5px;
+            padding: .5em;
+            box-sizing: border-box;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        #display {
+            text-align: right;
+            font-size: 2em;
+            background: rgba(252, 252, 252, 0.56);
+            border: 1px solid rgba(0, 0, 0, 0.44);
+            border-radius: 5px;
+            box-shadow: inset 3px 2px rgba(0, 0, 0, 0.13);
+            padding: .9em;
+
+            grid-column: 1 / -1;
+
+        }
+
+        /*
+                margin: auto;
+                height: 5em;
+                background:rgba(252, 252, 252, 0.56);
+                border:1px solid black;
+                border-radius: 5px;
+                width: 90%;
+                box-sizing: border-box;
+                grid-column-start: 1;
+                grid-column-end: 7;
+            }
+*/
+
+        .mais {
+            grid-row: 5 /7;
+            background-color: #ddd;
+            box-shadow: inset 3px 2px whitesmoke;
+            grid-column: 4 / 5;
+        }
+
+        .zero {
+            grid-row: 6;
+            grid-column: 1 / 3;
+            background-color: #ddd;
+            box-shadow: inset 3px 2px whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculadora">
+        <div id="display" class="input-valor">
+          0
+        </div>
+
+        <button>AC</button> <button>%</button> <button class="operador">x</button> <button class="operador">/</button>
+        <button class="key">7</button> <button class="key">8</button> <button class="key">9</button> <button class="verificar">=</button>
+        <button class="key">4</button> <button class="key">5</button> <button class="key">6</button> <button class="operador">-</button>
+        <button class="key">1</button> <button class="key">2</button> <button class="key">3</button> <button class="mais operador">+</button>
+        <button class="zero">0</button> <button>,</button>
+
+    </div>
+    <script type="text/javascript">
+        /*--------------CALCULADORA-------------------*/
+        // pego os elementos li e div input
+        var btn = document.querySelectorAll(".key li"),
+            input = document.querySelector(".input-valor"),
+            operador = document.querySelectorAll(".operador");
+
+        // Percorro o array para usar todas as informações
+        for (var i = 0; i < btn.length; i++) {
+            document.onkeypress = function(event) {
+                var key = event.charCode; // Mudança de keyCode para charCode, por que o firefox não aceitou keyCode
+                //console.log(key);
+                //console.log(String.fromCharCode(47));
+                for (var e = 0; e <= 10; e++) {
+                    if (key === (48 + e)) {
+                        input.innerHTML += e;
+                    }
+                }
+                switch (key) {
+                    case 42:
+                        input.innerHTML += "*";
+                        break;
+                    case 43:
+                        input.innerHTML += "+";
+                        break;
+                    case 45:
+                        input.innerHTML += "-";
+                        break;
+                    case 46:
+                        input.innerHTML += ".";
+                        break;
+                    case 47:
+                        input.innerHTML += "/";
+                        break;
+                    case 13:
+                    case 61:
+                        var equacao = input.innerHTML;
+                        if (equacao) {
+                            try {
+                                input.innerHTML = eval(equacao);
+                            } catch (e) {
+                                alert('Erro na expressão');
+
+                            }
+                        }
+                        break;
+                    case 67:
+                    case 99:
+                        input.innerHTML = "";
+                        break;
+                    default:
+                        //console.log("Procurando erros?");
+                        break;
+                }
+            };
+            btn[i].addEventListener('click', function() {
+                var btnVal = this.innerHTML,
+                    inputVal = input.innerHTML;
+                //console.log(btnVal);
+
+                // crio um clear caso o c for clicado
+                switch (btnVal) {
+                    case "c":
+                        input.innerHTML = "";
+                        break;
+                    case "=":
+                        // Crio a variável de equação aqui eu utilizo a função eval do javascript
+                        var equacao = inputVal;
+
+                        if (equacao) {
+                            try {
+                                input.innerHTML = eval(equacao);
+                            } catch (e) {
+                                alert('Erro na expressão');
+
+                            }
+                        }
+                        break;
+                    default:
+                        input.innerHTML += btnVal;
+                        break;
+                }
+
+            });
+        }
+    </script>
+</body></html>

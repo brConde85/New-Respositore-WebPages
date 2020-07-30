@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Javascript</h1>
+	
+	<button onclick="CalcularFuncao()">Calcular</button>
+	<button onclick="LimparFuncao()">Limpar</button>
+	<div id="output"></div>
+	<div id="linha"></div>
+	<script> 
+        var mensagem = '';
+//        var ano = parseFloat(prompt('Digite o ano 1004 para saber se é uma ano bissexto, até 2020.'));
+        function CalcularFuncao(){
+           var numero = parseFloat(prompt('Informe um numero para começar a tabuada de 1 a 100: '));
+            LimparFuncao();
+            var cont = 0;
+            while(cont <= 100){
+                
+                mensagem += numero + ' x ' + cont + ' = ' + (numero * cont) + '<br>';
+                    
+//                if((cont % 10) == 0){
+//                    mensagem += numero + ' x ' + cont + ' = ' + (numero * cont) + '<br>';
+//                 // document.write('<hr>');
+//                }
+                
+                cont++;
+            }
+            output.innerHTML = mensagem;
+        }
+        
+        function LimparFuncao(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+       
+        var output = document.querySelector('#output');
+        output.innerHTML = mensagem; 
+        
+    </script>
+</body>
+</html>

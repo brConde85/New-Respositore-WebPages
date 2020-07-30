@@ -1,0 +1,153 @@
+/****Cabecalho****/
+body{
+    font-family: tahoma, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#principal{    
+    width:  1024px;
+    margin: 20px auto;    
+}
+
+.header-top{
+    height:  50px;
+    background-color: #162028;
+    position: relative;
+}
+
+.logotipo{
+    margin: 8px 0 0 180px;
+}
+
+.header-nav{
+    position:absolute;
+    top: 0;
+    right: 0;    
+    height: 100%;
+}
+/* Por padrão ja possui margin e padding para zerar:*/
+.header-na ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 1px 13px 0 18px; 
+}
+
+.header-nav a{
+    text-decoration: none;    
+    color: dimgray;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+    /*Efeito na tag nav*/
+    transition-delay: linear ; 
+    transition-duration: .9s;
+    transition-property: color;
+}
+    .header-nav a:hover{
+        color: rgba(192,192,192, 0.8);
+        text-shadow: 3px 3px 5px black;
+}
+
+/****Main****/
+.portifolio{
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.portifolio h1{
+    font-size: 40px;
+    color: #252525;
+}
+
+.portifolio p{
+    font-size: 16px;
+    line-height: 2;
+    color: #252525;
+}
+
+.gallery{
+    color: #555;
+    padding: 0 100px 50px 100px;
+    overflow: auto;
+}
+
+.gallery-card{
+    width: 32%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+.gallery-title{
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.gallery-text{
+    color: gray;
+    line-height:1;
+}
+
+.about{
+    background-color: #003d52;
+    background-image: url(../imagens/bg_detalhe.png);
+    color: whitesmoke;
+    padding: 60px 120px;
+    background-position: right bottom;
+    height: 380px;
+    background-repeat: no-repeat;    
+}
+
+.about h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.about p{
+    line-height: 1.5;
+    font-style: ;
+    width: 75%;
+}
+
+.contact{
+    color: #143f52;
+    padding: 50px;
+    text-transform: uppercase;
+    text-align: center;    
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;   
+}
+
+.maps{
+    text-align: center;
+    border: 5px #003d52;
+    border-style: groove;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.maps iframe{
+    width: 100%;    
+}
+
+/****Footer****/
+.rodape{
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #0b171f;
+    color: #6f8597;
+    text-align: center;
+    text-shadow: 3px 3px 30px;
+    border-radius: 15px;
+    letter-spacing: 5px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	<div id="output">
+	    <div id="paragrafo"></div>
+	    <div id="paragrafo2"></div>
+	</div>
+	
+	<script> 
+        //sempre que necessitamos de acessar alguma coisa via javascript para html utilizamos document e o querySelctor vai selecinar o elemento pelo id, ou class, ou pela tag(div, h1,p, etc..).
+        // a variavel foi criada para receber a referencia do html
+        var output = document.querySelector('#output');
+        var paragrafo = document.querySelector('#paragrafo');
+        var paragrafo2 = document.querySelector('#paragrafo2');
+//        console.log(output);
+        
+        // para adicionar algo no interior do elemento usamos innerHTML 
+        //output.innerHTML = "TEXTO INSERIDO PELO JAVASCRIPT."        
+        
+        // a melhor forma e menos custoza para o browser de realizar a ação acima 
+        var mensagem = '';
+        for(var i = 0; i <= 10; i++){
+            mensagem += 'i: ' + i + '<br>';
+        }
+        paragrafo.innerHTML = mensagem;
+        paragrafo2.innerHTML = "ola mundo";
+        
+        
+        
+        
+    </script>
+</body>
+</html>

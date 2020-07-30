@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> Animação </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia, animação">
+        
+        <style>
+            
+            @keyframes slide{
+                0%, 22%, 100%{
+                    transform: translateY(0);
+                    transform: skewX(5deg);
+                    transition-delay: 3s;
+                }                
+               
+                25%, 47%{
+                    transform: translateY(-76vh);
+                }               
+                
+                50%, 72%{
+                    transform: translateY(-152vh);
+                }               
+                
+                75%, 97%{
+                    transform: translateY(-228vh);
+                }               
+                
+            }
+            
+            body{
+                font-family:sans-serif;
+                color: white;
+                background: #1c1c1c;
+                margin:0;
+                padding: 0;
+            }
+            
+            #slide-externo{
+                width:80vw;
+                height: 76vh;
+                border: 10px solid white;
+                box-shadow: 0 0 10px black;
+                margin-left: 10vw;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            
+            #slide-interno{
+                will-change: auto;
+                width: 100%;
+                animation: slide 15s infinite cubic-bezier(.67,-1.1,.46,0.83) both running;
+                opacity: .8;
+                animation-delay: 3s;
+            }
+            
+            #slide-interno:hover{
+                animation-play-state: paused;
+            }
+            
+            #slide-interno img{
+                display: block;
+                height: 76vh;
+                width:100%;
+        /* ele vai funcionar como o background-size porém com imagens*/
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Slide Show - Animation</h2>        
+       <div id="slide-externo">
+           <div id="slide-interno">
+               <img src="Imagens/slide1.jpg" alt="slide 1">
+               <img src="Imagens/slide2.jpg" alt="slide 2">
+               <img src="Imagens/slide3.jpg" alt="slide 3">
+               <img src="Imagens/slide4.jpg" alt="slide 4">
+           </div>
+       </div>
+        
+        
+    </body>
+</html>

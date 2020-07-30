@@ -1,0 +1,86 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="author" content="Bruno">
+        <meta name="description" content="HTML, CSS, e muito mais sobre tecnologia">
+        <meta name="keywords" content="HTML, CSS, grid layout">
+        <title>43 - Flexbox Cards</title>
+        <style>
+            .gridContainer{
+                width: 400px;
+                background: #ccc;
+            }
+            .gridItem{
+                background: #999;
+                font-size: 2em;
+                font-family: sans-serif;
+                padding: 5px 15px;
+            }
+            /*Para escolher todos os pares para seleção*/
+            .gridItem:nth-child(even){
+                background: #999;
+                color: whitesmoke;
+            }
+            /*Para escolher todos os ímpares para seleção*/
+            .gridItem:nth-child(odd){
+                background: #ddd;
+            }
+            /*GRID*/
+            .gridContainer{
+                width:100%;
+                /*Apesar de termos inserido display: grid nada foi alterado por não termos informado linhas e colunas*/
+                display: grid;
+                /*Para criar tres colunas;*/
+                /*grid-template-columns: 100px 100px 100px;*/
+                /*Para definirmos o tamanho ou expessura das linhas no caso como quero duas linhas coloco dois valores*/
+                grid-template-rows: 6em 6em;
+                /*Para escrevermos a mesma coisa de forma simplificada, foi definido no exemplo abaixo duas colunas com 8em e uma com 12em*/
+                grid-template-columns: repeat(3, 1fr);
+                /*grid-template-areas: 10em 10em;*/
+                /*Para inserir um espaçamento interno entre as linhas*/
+                grid-row-gap: .8em;
+                /*Para inserir um espaçamento interno entre as colunas*/
+                grid-column-gap: .8em;  
+            }
+            .gridItem:nth-child(1){
+                background: red;
+              /*grid-row-start: 1;
+                grid-row-end: 2; */
+              /*atalho para gid-row: start e end*/
+                grid-row: 1 / 2 ;
+              /*atalho para gid-column: start e end*/
+              /*grid-column-start: 3;
+                grid-column-end: 4; */
+                grid-column: 2 / 5;
+            }
+            .gridItem:nth-child(2){
+                background: blue;
+              /*grid-column:1/2;*/
+/*Para pegar todo conteúdo que faz parte da primeira linha e aumenta-lo até  a terceira linha*/
+                grid-row: 1/ span 2;                
+            }
+            .gridItem:nth-child(6){
+                background: yellow;
+                grid-column: 1/ 5;
+                height: 3em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Grid Layout</h2>
+        
+        <div class="gridContainer">
+            <div class="gridItem">1</div>
+            <div class="gridItem">2</div>
+            <div class="gridItem">3</div>
+            <div class="gridItem">4</div>
+            <div class="gridItem">5</div>
+            <div class="gridItem">6</div>
+        </div>
+        
+        
+        
+       
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica Javascript</h1>
+	<button onclick="iniciarCalculo('+')">+</button>
+	<button onclick="iniciarCalculo('-')">-</button>
+	<button onclick="iniciarCalculo('*')">&times;</button>
+	<button onclick="iniciarCalculo('/')">&divide;</button>
+	<div id="output"></div>
+	<script>
+        var num = parseFloat(prompt("Informe um número para começar:"));
+        
+        Escreve(num);
+        
+        function iniciarCalculo(simbolo){
+            // text content não aceita tags html, vem com o texto puro (ou seja, vai receber apenas o texto )
+            var n1 = parseFloat(document.querySelector("#output").textContent);  
+            var n2 = parseFloat(prompt("Informe outro número: "));
+           
+            //try cachPara interceptar um erro antes que ele esteja visível no console
+            try{
+                // pedindo para a função e retornar o valor que será mostrado na tela
+                var msg = Calcular(simbolo, n1, n2);
+            }catch(e){
+                alert(e);
+                return;
+            }
+            
+            Escreve(msg);
+        }
+        
+        function Escreve(mensagem){
+            var output = document.querySelector("#output");
+            output.innerHTML = mensagem;
+        }
+        
+        //var msg = parseFloat(prompt("Informe outro número:"));
+        
+        function Calcular(simbolo, n1, n2){
+            // verifica se pode ser convertido para numero(NaN" not a number")
+            if (isNaN(n1) || isNaN(n1)){
+                throw new Error('Informe um numero válido!');
+                // se não puder ser convertido para numero retorna zero
+                //return 0;
+            }
+            if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+//                Mostrar erro no console em tempo real para a execução do programa
+               throw new Error('Informe um simbolo válido!');
+            }
+            
+            var numeroCalculado = null;
+            
+            switch(simbolo){
+                case '+':                    
+                    numeroCalculado = (n1 + n2);                    
+                    break;
+                
+                case '-':                   
+                    numeroCalculado = n1 - n2;
+                    break;
+                
+                case '*':                     
+                    numeroCalculado = n1 * n2;
+                    break;
+                
+                case '/':                    
+                    numeroCalculado = n1 / n2;
+                    break;
+            }
+            return numeroCalculado;            
+        }       
+        
+    </script>
+</body>
+</html>

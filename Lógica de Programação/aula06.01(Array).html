@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Array</h1>
+    <div id="output"></div>
+	<script>
+//      alert("Olá Mundo!");
+//      var nome = prompt("Qual é seu nome?");
+//      alert("Bem-Vindo, " + nome);
+        var produtos = new Array('lápis', 'caneta', 'borracha', 'tesoura', 'caderno','folha');
+        
+        produtos.push('cartolina', 'compasso');
+        var msg = '';
+        //loop para informar o indice de um array com o produtos 
+        //setados em seu interior independente do tamanho da array
+        for(var i = 0; i < produtos.length; i++){
+            msg +='produto ' + (i+1) + ': ' +produtos[i] + '<br>';
+        }
+        
+        //para converter uma array em string podemos:
+        //var output = document.querySelector("#output").innerHTML = produtos.toString();
+        var output = document.querySelector("#output").innerHTML = msg;
+        
+    </script>
+</body>
+</html>

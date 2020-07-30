@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+        
+        // Dois jogadores digitarão dois numeros e javascript ira sortear um numero entre 0 e 1 se cair 0 o numero vencedor será o menor caso o contrario ganha o maior numero
+        var num1 = parseFloat(prompt("Digite um número"));
+        
+        var num2 = parseFloat(prompt("Digite um numero"));
+        // Para sortear um numero de 0 a 1
+        var sorteio =parseInt(Math.random() * 2);
+        
+        alert("Número sorteado: " + sorteio);
+        if(sorteio == 1){
+            if(num1 > num2){
+                alert("Jogador um venceu");
+            }else if(num1 == num2){
+                alert("Ouve um empate");
+            }else{
+                alert("Jogador 2 venceu");
+            }
+        }else{
+            if(num1 < num2){
+                alert("Jogador um venceu");
+            }else if(num1 == num2){
+                alert("Ouve um empate");
+            }else{
+                alert("Jogador 2 venceu");
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

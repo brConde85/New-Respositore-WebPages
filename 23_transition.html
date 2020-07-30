@@ -1,0 +1,104 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>23 - CSS: Transition</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Introdução sobre a utilização do CSS">
+    <meta name="keywords" content="html, css, form, forms, tecnologia">
+    <style>
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color:aqua;
+            margin: 50px auto;
+            border-radius: 50px/10px;
+
+            /*Para que possamos efetuar eventos de transição*/
+            transition-property: width;/*informa qual propriedade será animada*/
+            transition-duration: .8s;/*Sua duração*/
+            transition-timing-function: ease-in-out;/*tipo de animação*/
+
+            box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+        .div1:hover{
+            width: 300px;
+           box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color:#0058ff;
+            margin: 50px auto;
+            border-radius: 50px/10px;
+
+            /*Para que possamos efetuar eventos de transição*/
+            transition-property: all;/*informa qual propriedade será animada podendo ser utilizada a propriedade: "all" para animar todas as propriedades ou uma a uma width*/
+            transition-duration: .8s;/*Sua duração*/
+            transition-timing-function: cubic-bezier(.6,-0.6,.25,1.63);/*tipo de animação com cubic bazier*/
+            transition-delay: .5s;/*Para atrasar o comeco da animação*/
+
+            box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+        .div2:hover{
+            width: 400px;
+            height: 200px;
+           box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+        .div3{
+            width: 100px;
+            height: 100px;
+            background-color:#0b2a65;
+            margin: 50px auto;
+            border-radius: 50px/10px;
+
+            /*Para que possamos efetuar eventos de transição*/
+            transition-property: width, height;/*altera cada um dos elementos*/
+            transition-duration: 1s, 3s;/*tempo de execução para cada propriedade*/
+            transition-timing-function: cubic-bezier(.6,-0.6,.25,1.63);/*tipo de animação com cubic bazier*/
+            transition-delay: .0s, .4s;/*Para atrasar o comeco da animação*/
+            box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+        .div3:hover{
+            width: 400px;
+            height: 200px;
+           box-shadow: -1px 1px 0 #5d5d5d,
+            -2px 2px 0 #727272, -3px 3px 0 #868686,
+            -4px 4px 0 #a3a3a3;
+        }
+        p{
+            padding: 30px 30px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center">CSS - Transition</h1>
+
+    <div class="div1">
+        <p>Texto</p>
+    </div>
+
+    <div class="div2">
+        <p>Texto</p>
+    </div>
+
+    <div class="div3">
+        <p>Texto</p>
+    </div>
+
+</body>
+
+</html>

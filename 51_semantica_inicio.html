@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Semântica</title>
+
+</head>
+
+<body>
+
+    <h1> Mais sobre semântica</h1>
+    <!--    kbd para informar é uma tecla-->
+    <p>Por favor, aperte <kbd>CTRL</kbd> + <kbd>F5</kbd> Para recarregar essa página</p>
+
+    <h2>Evento sobre <abbr title="Linguagem de marcação de hipertexto">HTML</abbr> e <abbr title="folhas de estilo em cascata">CSS</abbr></h2>
+<!--    Para que o browser possa reconhecer o horário como é necessário que informemos o datetime com a data -->
+    <p>O evento ocorrerá em <time datetime="2020-09-15">15 de Setembro de 2020</time></p>
+    <p>O evento ocorrerá em <time datetime="2020-09-15">15/09/2020</time></p>
+<!--    O mesmo acontece quando vamos informar tbm a hora-->
+    <p>O evento ocorrerá em <time datetime="2020-09-15T20:00:00">15/09/20 - 20:00</time></p>
+<!--    Para informar o horário de brasilia-->
+    <p>O evento ocorrerá em <time datetime="2020-09-15T20:00:00-03:00">2020, 15 de Setembro - 20h00</time></p>
+
+    <h2>Confirme sua presença</h2>
+    <p>O agendamento está marcado para <time datetime="18:00">18h00</time></p>
+<!--    para evitar problemas com o leitor de texto dos browser quando quisermos remover ou inserir algo em um texto basta utilizarmos as tags corretas <del></del>(apagar)  e <ins></ins>(inserir)-->
+    <p>Aprender semântica HTML é <del>complicado</del> <ins>fácil</ins>.</p>
+<!--Para que termos em inglês possa ser executado por um leitor de texto na língua correta  -->
+    <p>O evento <span lang="en-us">JS Conference</span> será em Agosto</p>
+
+</body>
+
+</html>

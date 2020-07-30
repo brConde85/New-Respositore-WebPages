@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Javascript</h1>
+	
+	<button onclick="CalcularFuncao()">Tabuada</button>	
+	<button onclick="iniciarCalculo('+')">+</button>
+	<button onclick="iniciarCalculo('-')">-</button>
+	<button onclick="iniciarCalculo('/')">&divide;</button>
+	<button onclick="iniciarCalculo('*')">&times;</button>
+	<button onclick="LimparFuncao()">Limpar</button>
+	<div id="output"></div>
+	<div id="linha"></div>
+	<script>       
+        var mensagem = '';
+        var numero = parseFloat(prompt('Informe um número para começar:'));
+        
+        //escreve(numero);
+        
+        function CalcularFuncao(){
+           var numero = parseFloat(prompt('Informe um numero para começar a tabuada de 1 a 100: '));
+            LimparFuncao2();
+            var cont = 0;
+            while(cont <= 100){                
+                mensagem += numero + ' x ' + cont + ' = ' + (numero * cont) + '<br>';              
+                cont++;
+            }
+            output.innerHTML = mensagem;
+        }
+        
+        function iniciarCalculo(simbolo){
+            // textContent não aceite tags html diferente do innerHTML
+            var n1 =
+                document.querySelector("#output").textContent;
+            
+            var n2 = 
+                parseFloat(prompt("Informe o outro número:"));
+            
+            var msg = Calcular(simbolo, n1, n2)
+            
+            Escreve(msg);
+        }
+        
+        function Escreve(mensagem){
+//            var output = document.querySelector('#output');
+//            output.innerHTML = numero;
+            document.querySelector("#output").innerHTML = mensagem;
+        }
+        
+        function Calcular(simbolo, n1, n2){
+            
+            var numeroCalc = null;
+           
+            switch(simbolo){
+                case '+':
+                    numeroCalc = n1 + n2;                    
+                    break;
+                    
+                case '-':
+                    numeroCalc = n1 - n2;                     
+                    break;
+                    
+                case '*':
+                    numeroCalc = n1 * n2;                     
+                    break;
+                    
+                case '/':
+                    numeroCalc = n1 / n2;                      
+                    break;                
+            }            
+            return numeroCalc;
+        }
+        
+        function LimparFuncao(){
+            numero = '';
+            output.innerHTML = numero;            
+        }
+        
+        function LimparFuncao2(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+        
+        
+        
+        
+    </script>
+</body>
+</html>

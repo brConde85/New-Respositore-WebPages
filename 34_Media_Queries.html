@@ -1,0 +1,82 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+    <title>33 - Media Print</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+    <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+
+    <style>
+        body{
+            background-color: rgba(0, 0, 255, 0.43);
+            font-size: 16px;
+        }
+
+
+        .teste{
+            background-color: red;
+            width: 50%;
+            height: 50px;
+        }
+
+        .container{
+            background: white;
+            padding: 15px;
+            font-size: 24px;
+
+        }
+        .container div{
+            background: #ccc;
+/*            padding: 15px;*/
+            margin: 15px;
+            height: 150px;
+
+        }
+
+        .clearfix::after{
+            content:' ';
+            display: block;
+            clear:both;
+        }
+
+        @media screen and (min-width: 400px){
+            body{
+                background-color: orange;
+            }
+
+            .container div{
+                width: 46%;
+                float: left;
+                margin: 0 2%;
+            }
+/* outra forma de fazer a separação do container em duas:
+
+            container div{
+                margin: 10px;
+                width: calc(50% - 20px);
+                float: left;
+
+            }
+*/
+        }
+
+    /*  a viewport é a própria tela, esse meta serve para igualar as
+        edidas de celulares e desktop's, ou seja, a largura da viewport
+        será igual ao do device width. */
+         <meta name="viewport" content="width=device-width">
+    </style>
+</head>
+
+<body>
+    <h1>Exemplo de media queries</h1>
+    <p>Paragrafo qualquer</p>
+
+    <div class="teste"></div>
+
+    <div class="container clearfix">
+        <div class="div1">div 1</div>
+        <div class="div2">div 2</div>
+    </div>
+</body>
+</html>

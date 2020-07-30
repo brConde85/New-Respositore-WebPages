@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> 15 - Tabelas </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Criação e manipulção de tabelas.">
+    <meta name="keywords" content="html, css, table, td, tr">
+    <style>
+        body {
+            font-family: Verdana, sans-serif, times_new_roman;
+        }
+
+        hr {
+            border: 3px solid silver;
+        }
+
+        table {
+            background-color: skyblue;
+            border-collapse: collapse;
+            border: 5px gray solid;            
+            text-align: center;
+            margin: auto auto 40px;            
+        }
+
+        table td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        
+        table th {
+            background-color: #31485f;
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tabelas</h1>
+    <table>
+        <tr>
+            <td>1A</td>
+            <td>1B</td>
+            <td>1C</td>
+        </tr>
+        <tr>
+            <td>2A</td>
+            <td>2B</td>
+            <td>2C</td>
+        </tr>
+        <tr>
+            <td>3A</td>
+            <td>3B</td>
+            <td>3C</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Utilizando colspan</h2>
+    <table>
+        <tr>
+            <td colspan="3">1A</td>
+        </tr>
+        <tr>
+            <td>2A</td>
+            <td>2B</td>
+            <td>2C</td>
+        </tr>
+        <tr>
+            <td>3A</td>
+            <td>3B</td>
+            <td>3C</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Utilizando rowspan</h2>
+    <table>
+        <tr>
+            <td rowspan="3">1A</td>
+            <td>1B</td>
+            <td>1C</td>
+        </tr>
+        <tr>
+            <td>2B</td>
+            <td>2C</td>
+        </tr>
+        <tr>
+            <td>3B</td>
+            <td>3C</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Utilizando header e Table body</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>1A</th>
+                <th>1B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2A</td>
+                <td>2B</td>
+            </tr>
+            <tr>
+                <td>3A</td>
+                <td>3B</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table>
+        <caption><h3>Tabela de preços de cursos</h3></caption>
+        <thead>
+           <tr>
+               <th colspan="3" style="text-transform: uppercase; font-family: serif,times new roman; font-size: 20px;">Tabela de preços de cursos</th>
+           </tr>
+            <tr>
+                <th>Área</th>
+                <th>Curso</th>
+                <th>Valor (R$)</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3">*Valores sujeitos a alterações sem prévio aviso.</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="2">Web Design</td>
+                <td>InDesign</td>
+                <td>1.200,00</td>
+            </tr>
+            <tr>
+                
+                <td>moldar as imagens</td>
+                <td>R$ 500,00</td>
+            </tr>
+            <tr>
+                <td>Técnico em informática</td>
+                <td>Conhecimentos até o nível intermediário</td>
+                <td rowspan="2">R$ 800,00</td>
+            </tr>
+            <tr>
+                <td>Development</td>
+                <td>JavaScript</td>
+                
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>Develpment PHP</td>
+                <td>R$ 900,00</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

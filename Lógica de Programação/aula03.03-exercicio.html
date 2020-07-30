@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+
+        
+        
+        // Para saber de o indice é multipllo de 10
+        var ano = parseFloat(prompt('Digite um número para realizar à sua tabuada de 0 até 1000.'));
+       
+        
+        var indice = 0;
+        while(ano <= 2020){          
+           
+            if(ano % 4 === 0 || ano % 400 === 0 && !(ano % 100 === 0)){
+                document.write((ano) + '<br>');         
+            }          
+           
+           ano +=4;          
+       }
+       
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+        // validar duas notas caso uma seja zero é automaticamentereprovado
+        var nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        var nota2 = parseFloat(prompt("Digite a segunda nota"));
+        
+        if(nota1 === 0 || nota2 === 0){
+            alert("Voce foi reprovado");
+        }else{
+            var media = (nota1 + nota2) / 2;
+            if(media >= 6){
+                alert("Aprovado");
+            }
+            else{
+                alert("Recuperação");
+            }
+        }
+        
+//        outra forma
+//        if(nota1 === 0 || nota2 === 0 || media <= 5){
+//            alert("Reprovado");
+//        }else{
+//            alert("Aprovado");
+//        }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <title>26 - Pseudo-Classes e Pseudo-Elementos</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+        <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+    </head>
+    <body>      
+       <style>
+           input[type="checkbox"]{               
+               width: 50px;
+               height: 50px;
+           }
+           input[type="checkbox"]:checked{               
+               width: 20px;
+               height: 20px;
+           }
+           button:disabled{
+               background-color: darkred;
+           }
+           button:enabled{
+               background-color: darkgreen;
+           }
+           p{
+               color: red;
+           }
+           p:empty:before{
+               content: "Paragrafo vazio não dá!";
+           }
+           input[type="text"]{
+               border: 2px green solid;
+               border-radius: 10px;
+               background: #a8c8fc;
+               padding: 8px;
+               width: 45%;
+           }
+           input[type="text"]:focus{               
+               
+               background: rgba(230, 79, 79, 0.54);
+               padding: 8px;
+               width: 45%;
+           }
+           input[type="text"]:selection{
+               border: aquamarine 5px dotted;
+               border-radius: 10px;
+           }
+           input[type="text"]:read-only{
+               background: red;
+           }
+           a:hover, a:focus, div:focus{
+               background-color:brown;
+               cursor: pointer;
+           }
+           input[type="email"]{
+               border:2px blue solid;
+               padding: 8px;
+               border-radius: 10px;
+               background: #d0d066
+           }
+        </style>
+        <header>
+            
+        </header>
+        <main>
+              <!-- o "for" do label responde somente a um id de mesmo valor 
+              para deixar a label responsiva ao input ou click do usuário-->
+            <label for="sim">Sim <input type="checkbox" value="sim" id="sim"></label>
+            <br>
+            <label for="nao">Não <input type="checkbox" value="nao" id="nao"></label>
+            <hr>
+            <button>Entrar</button>
+            <button disabled>Voltar</button>
+            <hr>
+            <!--Paragrafo preenchido-->
+            <p>Paragrafo 01</p>
+            <!--Paragrafo preenchido com espaço, não está vazio por isso
+            a própriedade empty não é aplicada-->
+            <p> </p>
+            <!--Paragrafo vazio-->
+            <p></p>
+            
+            <hr>
+            
+            
+            <input type="text" value="Tem um valor inicial"><br>
+            <input type="text" value="Não pode digitar" readonly><br>
+            <input type="text" value="Desabilitado" disabled><br>
+            <input type="text"  placeholder="Some ao digitar"><br>
+            <hr>
+            <label for="name">Nome: <input type="text" id="name" placeholder="Seu nome..."></label><br>
+            <label for="idade">Idade: <input type="text" placeholder="34" id ="idade"></label><br>
+            <label for="endereco">Endereço: <input type="text" value="Rua Iça"></label><br>
+            <label for="uf">UF: <input type="text" value="MG" readonly id="uf"></label><br>
+            <label for="email">Email: <input type="email" value="brpanho@gmail.com" disabled></label>
+            
+            
+            <hr>
+            <ul>
+                <li><a href="">link falso</a></li>
+                <li><a href="">link falso</a></li>
+                <li><a href="">link falso</a></li>
+                <li><a href="">link falso</a></li>
+                
+            </ul>
+            <hr>
+            <!--Para forçar a div ser selecionada com focus como os 
+            demais da tag <a>-->
+            <div tabindex="1">div1</div>
+            <div tabindex="2">div2</div>
+            <div tabindex="3">div3</div>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

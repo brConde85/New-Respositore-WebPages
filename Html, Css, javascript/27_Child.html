@@ -1,0 +1,52 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <title>26 - Pseudo-Classes e Pseudo-Elementos</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+        <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+    </head>
+    <body>      
+       <style>
+           /*não distingue os filhos seleciona todos que estiverem  na 
+           mesma hierarquia*/
+           div p:nth-child(4){
+               color:red;
+           }
+           /*seleciona os filhos mas apenas os de msm tipo porem 
+           funciona apenas em tags*/
+           div p:nth-of-type(8){
+               background: yellow;
+           }
+           p:last-child{
+               color: blue;
+           }
+        </style>
+        <header>
+            
+        </header>
+        <main>
+            <div>
+                <p>Meu paragrafo</p>
+                <p>Meu paragrafo</p>
+                <hr>
+                
+                <p>Meu paragrafo</p>
+                <p>Meu paragrafo</p>
+                <hr>
+                
+                <p>Meu paragrafo</p>
+                <p>Meu paragrafo</p>
+                <hr>
+                
+                <p>Meu paragrafo</p>
+                <p>Meu paragrafo</p>              
+                
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+</html>

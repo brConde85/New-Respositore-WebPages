@@ -1,0 +1,53 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <title>28 - Pseudo-Classes e Pseudo-Elementos</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+        <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+    </head>
+    <body>
+       <style>
+           p{
+               text-align: justify;
+           }
+
+           p::first-letter{
+               font-size: 3em;
+               line-height: 1;
+               float: left;
+               display: inline-block;
+               margin-right: .2em;
+           }
+
+           p::first-line{
+               color: blue;
+           }
+
+           p::-moz-selection, p::selection{
+               background-color: #91d8b5;
+           }
+        </style>
+        <header>
+
+        </header>
+        <main>
+            <div>
+                <p>Borem ipsum dolor sit amet, consectetur adipisicing elit. Illo temporibus, eaque, molestias consequuntur delectus ut. Voluptatibus, atque eligendi reprehenderit natus maiores. Quod nulla aspernatur ex sequi fuga dolore necessitatibus doloremque?</p>
+
+                <p>Rossimus eos, dolorem officia libero excepturi? Nesciunt autem, quidem, velit quibusdam hic consequuntur similique ipsum cumque est aut voluptatum quod impedit fuga ut suscipit repellendus laudantium blanditiis iusto porro amet!</p>
+
+                <p>Urporis harum iure voluptates, quidem consequuntur enim atque sapiente asperiores voluptatibus! Sunt, laudantium a totam nobis, placeat enim hic perferendis odit? Iste nesciunt nemo quaerat magnam et similique adipisci labore.</p>
+
+                <p>Natque quam aut cum ducimus natus, distinctio optio, voluptatibus enim dolorum eveniet laboriosam, quasi harum molestias, sequi perspiciatis adipisci. Dicta a harum qui labore asperiores vitae quod quis, cupiditate officiis?</p>
+
+                <p>Ossimus eos, dolorem officia libero excepturi? Nesciunt autem, quidem, velit quibusdam hic consequuntur similique ipsum cumque est aut voluptatum quod impedit fuga ut suscipit repellendus laudantium blanditiis iusto porro amet!</p>
+
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

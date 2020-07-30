@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+//        alert("Olá Mundo!");
+//        var nome = prompt("Qual é seu nome?");
+//        alert("Bem-Vindo, " + nome);
+        
+//        switch(numero){
+//            case 1:
+//                alert('boa escolha');
+//                break;
+//            case 2: 
+//                alert('Isso ai!');
+//                break;
+//            default:
+//                alert('Opção inválida!');5
+//                break;
+//        }
+        var numero = parseFloat(prompt('Digite um número para realizar à sua tabuada de 0 até 10.'));
+        alert('for');
+        for(var x = 0; x <= 10; x++){
+            document.write('O número ' + numero + ' x ' + x +  ' = ' + (numero * x) + '<br>'); 
+        }
+        
+        var y = 0;
+        alert('while');
+        while(y <= 10){
+            document.write(numero + ' x ' + y + ' = ' + (numero * y)+'<br>');
+            y++;
+        }
+        
+        var indice = 0;
+        alert('do while');
+        do{
+            document.write(numero + ' x ' + indice + ' = ' + (numero * indice)+'<br>');
+            indice++;
+        }while(indice <= 10);
+        
+       
+        
+        
+    </script>
+</body>
+</html>

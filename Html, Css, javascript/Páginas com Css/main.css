@@ -1,0 +1,28 @@
+h1{
+	color: red;
+	font-size: 26px;
+	font:Arial;
+	background-color: orange;
+	margin-top: 50px;/*Espaço no topo*/
+	margin-left: 0px;/*Espaço na esquerda*/
+	padding-left: 290px;/*Espaço interno na lateral*/
+	padding-top: 50px;/*Espaço interno topo*/
+	padding-bottom: 50px;/*Espaço interno inferior*/
+}
+/*
+ * Sempre que formos definir um estilo 
+ * atravéz de uma Classe ela se iniciara
+ * por ponto
+ */
+.minhaClasse{
+	color: gray;
+}
+
+/*
+ * Sempre que formos definir um estilo 
+ * atravéz de um ID ela se iniciara
+ * por #
+ */
+#meu-id{
+	color: black;
+}

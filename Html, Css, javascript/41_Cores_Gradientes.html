@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+    <title>41 - Cores Gradientes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno Luiz Panho Marciano">
+    <meta name="description" content="Como adicionar aqrquivos de media a nossa página web.">
+    <meta name="keywords" content="html, media, css, técnologia">
+    <meta name="viewport" content="width-device-width">
+
+    <style>
+        #grupo-cores {
+            padding: 15px;
+            background: url(Imagens/tile.png);
+            /*Criando um contador para as div's*/
+            counter-reset: contador;
+            
+        }
+
+        #grupo-cores div {
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0, 0, 0, .5);
+            margin: 20px auto;
+            padding: 15px;
+            /*Contador será incrementado +1*/
+            counter-increment: contador;
+        }
+        #grupo-cores div:before{
+            /*Para inserir o contador*/
+            content: '['counter(contador)']';
+        }
+        
+        #grupo-cores div:nth-child(2){
+            background-color: blueviolet;
+            /*impede que as cores ocupem a area da borda*/
+            background-clip: padding-box;
+        }
+        #grupo-cores div:nth-child(3){
+            background-color: rgb(50%,50%,0%);
+            background-clip: content-box;
+        }
+        /*rgba para cor com um pouco de transparência de 0 ate 1*/
+        #grupo-cores div:nth-child(4){
+            background-color: rgba(50%,50%,0%, .4);
+            background-clip: content-box;
+        }
+    /*No HSL primeiro passo o tom em graus por isso usamos deg, os demais valores serão em porcentagem, depois a saturação e em seguida a luz */
+         #grupo-cores div:nth-child(5){
+            background-color: hsl(150deg, 40%, 40%);
+            background-clip: padding-box;
+        }
+        
+        /*HSLa para transparência*/
+         #grupo-cores div:nth-child(6){
+            background-color: hsl(150deg, 40%, 40%, .4);
+            background-clip: padding-box;
+        }
+        
+         #grupo-cores div:nth-child(7){
+            background-image: linear-gradient(to bottom right, blue, red);
+            background-clip: padding-box;
+        }
+        
+        #grupo-cores div:nth-child(8){
+            background-image: linear-gradient(38deg, blue, transparent);
+            background-clip: padding-box;
+        }
+        #grupo-cores div:nth-child(9){
+            background-image: linear-gradient(48deg, blue, transparent), linear-gradient(red,transparent);
+            background-clip: padding-box;
+        }
+        /*para o circulo interno acompanhar as bordas*/
+        #grupo-cores div:nth-child(10){
+            background-image: radial-gradient(red, blue);
+            background-clip: padding-box;
+        }
+        /*para o circulo ignorar as bordas*/
+        #grupo-cores div:nth-child(11){
+             background-image: radial-gradient(circle, red, blue);
+            background-clip: padding-box;
+        }
+        /*aplicando mais cores*/
+        #grupo-cores div:nth-child(12){
+             background-image: radial-gradient(red, blue, orange,  yellow);
+            background-clip: padding-box;
+        }
+        /*com porcentagens*/
+        #grupo-cores div:nth-child(13){
+             background-image: radial-gradient(ellipse, red 50%, blue 25%, green 80%);
+            background-clip: padding-box;
+        }
+        /*o ponto inicial do gradiente começa em 20% e 30% no eixo vertical com corner*/
+        #grupo-cores div:nth-child(14){
+            background-image: radial-gradient(closest-corner at 20% 30%, red 50%, blue 25%, green 80%);
+            background-clip: padding-box;
+        }
+         /*foi colocado o msm ponto, ou seja, o centro da forma vermelha ate 30% do ponto mais longe com corner*/
+        #grupo-cores div:nth-child(15){
+            background-image: radial-gradient(farthest-corner at 20% 30%, red 50%, blue 25%, green 80%);
+            background-clip: padding-box;
+        }
+        /*repete ate um limite definido,se o ultimo valor informado for menor que 100% ele vai se repetindo, no ex. o green com 25% da tela vai se repetindo até completar 100% da tela*/
+        #grupo-cores div:nth-child(16){
+            background-image: repeating-linear-gradient(red 0%,yellow 10%, blue 15%, green 25%);
+            background-clip: padding-box;
+        }
+         /*attachment mantem fixo o background mas a medida que arastamos o scroll o background muda de cor*/
+        #grupo-cores div:nth-child(17){
+            background-image: linear-gradient(red, blue);
+            background-clip: padding-box;
+            background-attachment: fixed;
+        }
+        
+        #grupo-cores div:nth-child(18){
+            background-image: radial-gradient(closest-corner at 50% 19%, orange, transparent), url(Imagens/bg.jpg);
+            background-size: cover;
+            background-clip: padding-box;
+            background-position: center -30px, center bottom;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cores Gradientes</h1>
+    <h2>Backgrounds, cores e gradientes</h2>
+    <p>Names, hexadecimais, RGB, RGBa, HSL, HSLa</p>
+    <div id="grupo-cores">
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+        <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+         <div class="cores">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, amet beatae impedit omnis error officia, praesentium rerum ratione voluptate vel ad vero quia minima mollitia itaque a ipsam ipsum illum.</p>
+        </div>
+    </div>
+</body></html>

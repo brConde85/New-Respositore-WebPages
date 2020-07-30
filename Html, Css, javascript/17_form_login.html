@@ -1,0 +1,84 @@
+<!Doctype html>
+<html lang="pt-br">
+    <head>
+       <title>16 - Formulários</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="Introdução sobre a utilização de fomrs">
+        <meta name="keywords" content="html, css, form, forms, tecnologia">
+        <style>
+            body{
+                font-family: verdana, sans-serif;
+                background-color: rgba(89, 108, 89, 0.49);
+            }
+            
+            h1{
+                text-align: center;
+            }
+            
+            form legend{
+                font-size: 20px;
+            }
+            
+            .form-login{
+                width: 300px;
+                margin: 50px auto 0;                
+            }
+            
+            .form-login label{
+                margin-top: 25px;
+                margin-bottom: 5px;
+                display: block;                
+            }
+            
+            .form-login fieldset{
+                background-color: #ccc;
+                border-radius: 10px;
+                border: 4px double #1c1a1a;                
+            }
+            
+            .form-login input{
+                border: none;
+            }
+            
+            #user, #pass, .btn{
+                display: block;
+                width:100%;
+                background-color: #efefef;
+                box-sizing: border-box;
+                padding: 8px;
+                font-size: 15px;
+            }
+            
+            #user:focus, #pass:focus{
+                background-color: white;
+            }
+            
+            .btn{
+                margin-top: 15px;
+                padding: 11px;
+            }
+            #user{
+                margin-bottom: 15px;
+            }
+        </style> 
+    </head>
+    <body>
+        <h1>Formulário(form)</h1>
+        <br>
+        <form action="#" method="POST" class="form-login">
+            <fieldset>
+                
+                <legend>Login</legend>
+                <label for="user">Digite o seu usuário: </label>
+                <input type="text" id="user" name="user" autofocus>
+                
+                <label for="password">Digite o seu password:  </label>
+                <input type="password" id="pass" name="pass">
+                
+                <input type="submit" value="Logar" class="btn">                
+                
+            </fieldset>
+        </form>
+    </body>
+</html>

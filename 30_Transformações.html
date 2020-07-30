@@ -1,0 +1,161 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+    <title>28 - Pseudo-Classes e Pseudo-Elementos</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+    <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div1 {
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            text-align: center;
+            transform: translate(50%, 50%);
+        }
+
+        .div2 {
+            width: 120px;
+            height: 120px;
+            background-color: blue;
+            position: relative;
+            top: 0%;
+            left: 50%;
+        }
+        /*div3 */
+        .div3{
+            width: 50%;
+            border: 7px solid;
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+        .div3-interna{
+            transform: translateX(50%);
+            background: yellow;
+        }
+        .div4{
+            width: 50%;
+            border: 7px solid;
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+        .div4-interna{
+            transform: rotate(20deg);
+            transform-origin: left bottom;
+            background: yellow;
+        }
+        .div5{
+            width: 50%;
+            border: 7px solid;
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+        .div5-interna{
+            transform: rotate(30deg) translate(60px);
+            background: yellow;
+        }
+        .div6{
+            width: 50%;
+            border: 7px solid;
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+        .div6-interna{
+            transform:  translate(60px) rotate(30deg);
+            background: yellow;
+        }
+        .div7{
+            width: 100px;
+            height:100px;
+            background: orange;
+            transform:skew(20deg, 5deg);
+            margin-left: 25px;
+        }
+        .div8{
+            width: 100px;
+            height:100px;
+            background: orange;
+/*            margin-left: 80px;*/
+            transform: scale(4,.5) translate(50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        div1 transform
+    </div>
+
+    <div class="div2">
+        div2 position
+    </div>
+
+    <hr>
+
+    <div class="div3">
+        <div class="div3-interna">conteúdo qualquer</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perferendis nemo veritatis accusantium hic labore officia quas
+                aspernatur, odio culpa vitae iste placeat expedita eum praesentium,
+                asperiores nisi ad, facilis sit! Alias minima fugit, deserunt doloribus
+                ullam possimus porro quos ratione tempora dicta quia aspernatur, sint
+                optio pariatur nostrum quae magnam qui, rerum repellendus harum sequi
+                et. Nihil sequi ipsam soluta.</p>
+    </div>
+
+    <hr>
+
+    <div class="div4">
+        <div class="div4-interna">conteúdo qualquer</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perferendis nemo veritatis accusantium hic labore officia quas
+                aspernatur, odio culpa vitae iste placeat expedita eum praesentium,
+                asperiores nisi ad, facilis sit! Alias minima fugit, deserunt doloribus
+                ullam possimus porro quos ratione tempora dicta quia aspernatur, sint
+                optio pariatur nostrum quae magnam qui, rerum repellendus harum sequi
+                et. Nihil sequi ipsam soluta.</p>
+    </div>
+
+    <hr>
+
+    <div class="div5">
+        <div class="div5-interna">conteúdo qualquer</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perferendis nemo veritatis accusantium hic labore officia quas
+                aspernatur, odio culpa vitae iste placeat expedita eum praesentium,
+                asperiores nisi ad, facilis sit! Alias minima fugit, deserunt doloribus
+                ullam possimus porro quos ratione tempora dicta quia aspernatur, sint
+                optio pariatur nostrum quae magnam qui, rerum repellendus harum sequi
+                et. Nihil sequi ipsam soluta.</p>
+    </div>
+
+    <hr>
+
+    <div class="div6">
+        <div class="div6-interna">conteúdo qualquer</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Perferendis nemo veritatis accusantium hic labore officia quas
+                aspernatur, odio culpa vitae iste placeat expedita eum praesentium,
+                asperiores nisi ad, facilis sit! Alias minima fugit, deserunt doloribus
+                ullam possimus porro quos ratione tempora dicta quia aspernatur, sint
+                optio pariatur nostrum quae magnam qui, rerum repellendus harum sequi
+                et. Nihil sequi ipsam soluta.</p>
+    </div>
+
+    <hr>
+
+    <div class="div7">div7</div>
+    <hr>
+    <div class="div8">div8</div>
+    <br>
+</body></html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content=" Site conténdo html, listas aninhas e listas de definição. Com o objetivo de mostrando sua melhor usabilidade.">
+    <meta name="keywords" content="html, listas aninhas, listas de definição">
+    
+    <style>
+        ul{
+            list-style-type: none; 
+        }
+        li ul{
+            height: 0;
+            overflow: hidden;
+            transition: height .9s;
+            list-style-type: none; 
+        }
+        
+        li:hover{
+            display: inline-block;
+            background: #ccc;
+            padding: 10px 60px;
+        }
+        
+        li:hover ul{
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Listas aninhadas</h1>
+    <ul>
+        <li>item 01</li>
+        <li>
+            item 02
+            <ul>
+                <li>Astolfo</li>
+                <li>Gumercindo</li>
+                <li>Emiliano</li>
+                <li>Estapafudio</li>
+            </ul>
+        </li>
+        <li>item 03</li>
+    </ul>
+    <hr>
+    <h1>Listas de definição</h1>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação de Hypertexto.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem para criação de folhas de estilos.</dd>
+    </dl>
+    <hr>
+    <dl>
+        <dt>www</dt>
+        <dt>internet</dt>
+        <dd>rede mundial de computadores.</dd>
+    </dl>
+    <hr>
+    <dt>Javascript</dt>
+    <dd>linguagem script para a internet.</dd>
+    <dd>Script para rodar no browser.</dd>
+</body>
+</html>

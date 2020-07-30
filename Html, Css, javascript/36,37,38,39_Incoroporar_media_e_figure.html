@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+       <tilte>36-Incorporar arquivos de Media</tilte>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno Luiz Panho Marciano">
+        <meta name="description" content="Como adicionar aqrquivos de media a nossa página web.">
+        <meta name="keywords" content="html, media, css, técnologia">
+    </head>
+    <body>
+        <h1>Incorporar arquivos de Media</h1>
+        <h2>Áudio</h2>
+        <audio controls autoplay loop>
+            <source src="media/mozart_trompa.mp3" type="audio/mp3">
+            <source src="media/mozart_trompa.ogg" type="audio/ogg">
+            <p>Seu browser não suporta esse recurso de áudio</p>
+        </audio>
+        
+        <h2>Video</h2>
+        <video controls autoplay loop muted style="width: 50em;">
+            <source src="media/video.mp4" type="video/mp4">
+            <source src="media/video.ogg" type="video/ogg">
+            <source src="media/video.webm" type="video/webm">
+            <p>Seu browser não possui suporte para a media de video.</p>
+        </video>
+        
+        <h2>Iframe</h2>
+        <iframe src="15_table.html" frameborder="1" width="100%" height="500"></iframe><br>
+        <iframe src="https://www.youtube.com/watch?v=3TAUnYZpMbA" frameborder="0" width="100%" height="500">
+        <iframe width="100%" height="515" src="https://www.youtube.com/embed/3TAUnYZpMbA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+            
+        </iframe>
+    </body>
+</html>

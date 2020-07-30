@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+
+        
+        
+        // Para saber de o indice é multipllo de 10
+        var ano = parseFloat(prompt('Digite o ano 1004 para saber se é uma ano bissexto, até 2020.'));
+       
+        
+        var indice = 0;
+        while(ano <= 2020){          
+           
+            if(!(ano % 100 === 0) || ano % 400 === 0){
+                document.write((ano) + '<br>');         
+            }else{
+                document.write(ano + ' não é bissexto <br>');
+            }          
+           
+           ano +=4;          
+       }
+       
+        
+        
+    </script>
+</body>
+</html>

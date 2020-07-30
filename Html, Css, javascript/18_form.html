@@ -1,0 +1,130 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>16 - Formulários</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Introdução sobre a utilização de fomrs">
+    <meta name="keywords" content="html, css, form, forms, tecnologia">
+    <style>
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Formulário(form)</h1>
+    <br>
+    <form action="#" method="POST" class="formlogin">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label>Email</label>
+            <!--Utilizamos required para fazer com que um campo seja obrigatório-->
+            <input type="email" required>
+            <br>
+            <label>Telefone</label>
+            <input type="tel" placeholder="(30)1234-5678" required>
+            <br>
+            <label for="">Número de filhos</label>
+            <input type="number" min="0" max="10">
+            <br>
+            <label for="">Nascimento</label>
+            <input type="date" min="2020-01-01" max="2140-01-30">
+            <br>
+            <label for="">Nascimento</label>
+            <input type="datetime-local">
+            <p>Sexo:</p>
+            <label for="">Masculino</label>
+            <input type="radio" name="sexo" value="M">
+            <label>
+                <!--Para vincular a label ao input-->
+                Feminino
+                <input type="radio" name="sexo" value="F">
+            </label>
+            <br>
+            
+            <br>
+            <label>Estado</label>
+            <select name="estado" id="state">
+                <option value="0">Selecione um estado</option>
+                <option value="SP">São Paulo</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="RJ">Rio de Janeiro</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <label>
+               <!--Nesse caso como o atributo name possui nomes diferentes o usuário pode escollher mais de um elemento como área de interesse-->
+                <input type="checkbox" name="html" value="html">HTML
+            </label>
+            
+            <label for="css">
+                <input type="checkbox" name="css" value="css" id="css">CSS                
+            </label>
+            
+            <label for="java">
+                <input type="checkbox" name="java" value="java" id="java">JavaScript
+            </label>
+            <br>        
+        </fieldset>
+        <fieldset>            
+            <legend>Tipos de Mensagens</legend>
+            <p>Mensagem</p>
+            <!--para impedir que o usuario altere o tamanho da caixa de msg podemos inserir um resize em style para definir um numero de caracteres podemos inserir o atributo "maxlength"-->
+            <textarea name="msg" id="" cols="30" rows="10" maxlength="50" style="resize: none"></textarea>
+            <br>
+            <!--Para inserir dentro da msg um texto e impedir que ele seja alterado com readonly-->
+            <p>Contrato</p>
+            <textarea name="contrato" id="" cols="30" rows="10" style="resize: none" readonly>Texto do contrato...</textarea>
+            <br>
+            <!--Para definir um checkbox ja preemchido por padrão utilizamos o atributo checked-->
+            <label for="contrato"><input type="checkbox" name="contrato" value="contrato" checked id="contrato">Li e aceito</label>
+            <br>
+            <br>
+            <p>Anexe seu contrato</p>
+            <input type="file" value="file">
+            <br>
+            <!--Hidden para passar algum dado sem que o usuário saiba, exemplo com uma data de expiração-->
+            <input type="hidden" name="expira" value="2020-12-30">
+            <br>
+            <!--Range para criar um intervalo para a manipulação do usuário "como um volume" e necessário informar um mínimo e um máximo, podendo definir um intervalo como um salto de casas com o step-->
+            <input type="range" min="0" max="100" step="5">
+            <br>
+            <!--Para o usuário ter a opção de escolher vários itens dentro de uma lista -->
+            <p>Escolha uma opção:</p>
+            <select multiple>
+                <option value="">opcao 1</option>
+                <option value="">opcao 2</option>
+                <option value="">opcao 3</option>
+                <option value="">opcao 4</option>
+                <option value="">opcao 5</option>
+            </select>
+            
+            <br>
+             <!--Para o usuário ter uma maiorvis de escolher vários itens dentro de uma lista -->
+            <p>Escolha uma opção:</p>
+            <select size="3">
+                <option value="">opcao 1</option>
+                <option value="">opcao 2</option>
+                <option value="">opcao 3</option>
+                <option value="">opcao 4</option>
+                <option value="">opcao 5</option>
+            </select>
+            <br>
+            <input type="time">
+            <input type="color">
+            
+            
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="button" value="Ok">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+
+</html>

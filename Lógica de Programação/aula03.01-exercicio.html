@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+
+        
+        
+        // Para saber de o indice é multipllo de 10
+        var numero = parseFloat(prompt('Digite um número 1004 para começar.'));
+        alert('for');
+//        for(var x = 0; x <= 1000; x++){
+//            document.write('O número ' + numero + ' x ' + x +  ' = ' + (numero * x) + '<br>');
+//            if(x % 10 === 0 && x > 0){
+//                document.write('<hr>');
+//            }
+//        }
+        
+//        var y = 0;
+        
+//        alert('while');
+//        while(y <= 10){
+//            document.write(numero + ' x ' + y + ' = ' + (numero * y)+'<br>');
+//            y++;
+//        }
+//        
+//        var indice = 0;
+//        alert('do while');
+//        do{
+//            document.write(numero + ' x ' + indice + ' = ' + (numero * indice)+'<br>');
+//            indice++;
+//        }while(indice <= 10);
+        var indice = 0;
+       while(numero <= 2020){
+           
+           if(indice % 4 === 0){
+                numero += indice;                    
+                document.write((numero) + '<br>');   
+            }
+           
+           
+           indice ++;          
+       }
+        
+        
+    </script>
+</body>
+</html>

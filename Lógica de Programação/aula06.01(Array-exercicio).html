@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+        var dias = new Array('domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado');
+        //para termos acesso ao dia da semana atual utilizaremos o objeto 'date'
+        var hoje = new Date();
+        //para pegarmos o dia da semana 'getDay()'
+        var diaSemana = hoje.getDay();
+        /*
+         * 0 - domingo;
+         * 1 - segunda;
+         * 2 - terca;
+         * ...
+         * 6 - sabado
+         */
+//        switch(diaSemana){
+//            case 0:
+//                alert("Bem vindo, hoje é domingo");
+//                break;
+//                
+//            case 1:
+//                alert("Bem vindo, hoje é segunda");
+//                break;
+//                
+//            case 2:
+//                alert("Bem vindo, hoje é terca");
+//                break;
+//                
+//            case 3:
+//                alert("Bem vindo, hoje é quarta");
+//                break;
+//            
+//            case 4:
+//                alert("Bem vindo, hoje é quinta");
+//                break;
+//                
+//            case 5:
+//                alert("Bem vindo, hoje é sexta");
+//                break;
+//                
+//            case 6:
+//                alert("Bem vindo, hoje é sabado");
+//                break;
+//        }
+        
+        alert("Bem vindo hoje é " + dias[diaSemana]);
+        
+        
+        //alert("Bem vindo, hoje é " + diaSemana);
+    </script>
+</body>
+</html>

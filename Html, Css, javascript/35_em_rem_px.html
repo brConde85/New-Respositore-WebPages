@@ -1,0 +1,70 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+    <title>33 - Media Print</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+    <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+    <meta name="viewport" content="width=device-width">
+    
+    <style>
+        html{
+            font-size: 32px;
+        }
+        
+        body {
+            font: 16px sans-serif;            
+        }
+        
+        div{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 2em;
+/*          tamanho original de 320px para fazer a converção para 
+            acessibilidade basta dividir o valor de: 320px pela fonte
+            16px --> 320 / 16 = "20em"" */
+/*          width: 320px;*/
+            width: 20em;          
+            margin: auto;
+            font-size: 16px;
+        }
+        
+        h1{
+            text-align: center;
+        }
+        
+        p{
+            margin: 0;
+/*            Espaçamento entre linhas*/
+            line-height: 1.5;
+            text-align: justify;
+            text-justify: inter-word;
+/*            16 * 1.25 = 20*/
+            font-size: 1.25em;
+        }
+        
+        a{
+/*          Quero uma font de 24px para fazer o calculo temos que levar em consideração
+            o tamanho da classe pai que agora é o <p> com o equivalente a 20px então basta
+            dividir o tamanho final de 24px por 20px (24 / 20 = 1.2em)*/
+/*           font-size: 24px;*/
+            font-size: 1.2em;
+            font-size: 
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Unidades de Medidas</h1>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repellendus pariatur, laudantium, blanditiis cupiditate,
+            sequi dolor ut id quas quia quos <a href="#">nesciunt modi 
+            perferendis</a> doloribus. Suscipit quidem culpa laudantium 
+            nisi perspiciatis!
+        </p>       
+    </div>
+</body></html>

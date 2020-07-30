@@ -1,0 +1,282 @@
+@using Rastreamento.Models
+
+<!doctype html>
+<html lang="pt-br">
+
+<body>   
+    
+    <footer id="menuRotas" class="menuRotas pt-4">
+
+        <!-- Footer Elements -->
+        <div class="container-fluid">
+            <div class="row" id="linha1" style="display: none;">
+                <div class="panel col-xs-10">
+                    <table class="table table-bordered table-hover table-striped centro" style="text-align: center; bottom: 200px;">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td colspan="3">
+                                                <img class="imgTabela" src="~/images/marcador-inicio.png" width="10" />
+                                                <span class="boxtexto">Início da rota</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td colspan="3">
+                                                <img class="imgTabela" src="~/images/marcador-final.png" width="10" />
+                                                <span class="boxtexto">Fim da rota</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td colspan="3">
+                                                <img class="imgTabela2" src="~/images/total-pontos.png" width="18" />
+                                                <span class="boxtexto">Total de pontos</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td colspan="3">
+                                                <i class="fa fa-tachometer fa-sm text-primary imgTabelaMed" aria-hidden="true"></i>
+                                                <span class="boxtexto">Vel. Média</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td colspan="3">
+                                                <i class="fa fa-tachometer fa-sm text-danger imgTabela" aria-hidden="true"></i>
+                                                <span class="boxtexto">Vel. Máxima</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                                <th>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td colspan="3">
+                                                <img class="imgTabelaInicioFim" src="~/images/vinculo-inicio-fim.png" width="40" />
+                                                <span class="imgTabelaDPercorrida">Dist. Percorrida</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="line-height: 30px;">
+                                    <div  name="data_inicio_id"><span id="data_inicio_id"></span></div>
+                                    
+                                </td>
+                                <td style="line-height: 30px;">
+                                    <div id="datafim_id" name="datafim_id">@ViewBag.Fim teste</div>
+                                </td>
+                                <td style="line-height: 30px;">
+                                    <div id="qtpontos_id" name="qtpontos_id">@ViewBag.Total teste</div>
+                                </td>
+                                <td style="line-height: 30px;">
+                                    <div id="velocidade_media_id" name="velocidade_media_id">@ViewBag.VelMedia teste</div>
+                                </td>
+                                <td style="line-height: 30px;">
+                                    <div id="velocidade_maxima_id" name="velocidade_maxima_id">@ViewBag.VelMax teste</div>
+                                </td>
+                                <td style="line-height: 30px;">
+                                    <div id="velocidade_id" name="velocidade_id">@ViewBag.Distancia teste</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel2" style="display:none;">
+                    <div class="col col-xs-5" >
+                        <table class="table table-bordered table-hover table-striped tabela1 centro" style="text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <img class="imgTabela" src="~/images/marcador-inicio.png" width="10" />
+                                                    <span class="boxtexto">Início da rota</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <img class="imgTabela" src="~/images/marcador-final.png" width="10" />
+                                                    <span class="boxtexto">Fim da rota</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <img class="imgTabela2" src="~/images/total-pontos.png" width="18" />
+                                                    <span class="boxtexto">Total de pontos</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="line-height: 30px;">
+                                        <div id="data_inicio_id" name="data_inicio_id"><a href="#" disabled >content</a></div>
+                                    </td>
+                                    <td style="line-height: 30px;">
+                                        <div id="datafim_id" name="datafim_id">@ViewBag.Fim teste</div>
+                                    </td>
+                                    <td style="line-height: 30px;">
+                                        <div id="qtpontos_id" name="qtpontos_id">@ViewBag.Total teste</div>
+                                    </td>                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col col-xs-5">
+                        <table class="table table-bordered table-hover table-striped tabela2 centro" style="text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <i class="fa fa-tachometer fa-sm text-primary imgTabelaMed" aria-hidden="true"></i>
+                                                    <span class="boxtexto">Vel. Média</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <i class="fa fa-tachometer fa-sm text-danger imgTabela" aria-hidden="true"></i>
+                                                    <span class="boxtexto">Vel. Máxima</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                    <th>
+                                        <table style="width: 6em;">
+                                            <tr>
+                                                <td colspan="3">
+                                                    <img class="imgTabelaInicioFim" src="~/images/vinculo-inicio-fim.png" width="40" />
+                                                    <span class="imgTabelaDPercorrida">Dist. Percorrida</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </th>
+                                </tr>  
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="line-height: 30px;">
+                                        <div id="velocidade_media_id" name="velocidade_media_id">@ViewBag.VelMedia teste</div>
+                                    </td>
+                                    <td style="line-height: 30px;">
+                                        <div id="velocidade_maxima_id" name="velocidade_maxima_id">@ViewBag.VelMax teste</div>
+                                    </td>
+                                    <td style="line-height: 30px;">
+                                        <div id="velocidade_id" name="velocidade_id">@ViewBag.Distancia teste</div>
+                                    </td>
+                                </tr>
+                            </tbody>                           
+                        </table>
+                    </div>
+
+                </div>
+                <div class="col-xs-2">
+
+                    <form method="post">
+                        <div class="input-group">
+                            <a href="#" id="voltar" type="button" class="btn btn-danger navbar-btn-right">Voltar</a>
+                        </div>
+
+                        <div class="input-group">
+                            <a href="#" id="btnExport2" type="button" class="btn btn-danger navbar-btn-right ocultarbotao">Relatório da rota</a>
+                        </div>
+
+                        <div class="input-group">
+                            <a href="#" id="btnExport2" type="button" class="btn btn-danger navbar-btn-right voltarBotao" style="display:none;">Relatório</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row" id="linha2">
+
+             
+                <form id="form_maparota" class="" method="post">
+                    <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3 veiculoRastreado">
+                        <label class="veiculoRastreadoLabel sr-only" for="device">Veículo rastreado</label>
+                        <select asp-items="@ViewBag.ListaDispositivos" style="width: 20em ; left: 0; display: none;" name="device" id="device" class="select2 " onchange="ListaPercursos()" placeholder="SELECIONE UM VEÍCULO..."></select>
+                    </div>
+
+                    <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <label class="labelUltimos sr-only" for="percursos">Últimos registros</label>
+                        <select id="percursos" name="percursos" class="percursosMapa" style="width: 22em; border-radius: 5px;" placeholder="SELECIONE UM PERCURSO...">
+                            <option value="0" style="width: 178%; color: #ccc;">SELECIONE UM PERCURSO...</option>
+                        </select>
+                    </div>
+
+                    
+                    <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <label class="labelRotas sr-only">Rotas por período</label>
+
+                        <label class="form-check-label sr-only mr-n3" for="datafinal">Data inicial</label>
+                        <input class="form-control datetimepicker datemask text-uppercase" id="datainicial" name="datainicial" autocomplete="off" placeholder="Selecione a data inicial" />
+
+                        <label class="form-check-label sr-only mr-n3" for="datafinal">Data final</label>
+                        <input class="form-control datetimepicker datemask text-uppercase" id="datafinal" name="datafinal" autocomplete="off" placeholder="Selecione a data final" />
+
+                    </div>                   
+
+                    <div class="col col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+                        <button id="verRota" type="submit" class="btn btn-danger btn-block mr-auto ml-auto">Exibir rota no mapa</button>
+                        
+                        <a href="#" id="btnExport" name="formValida2" type="button" class="btn btn-danger navbar-btn-right">Relatório da rota</a>
+                        
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#OcultaMenu").click(function () {
+                $("#menuRotas").fadeToggle();
+            });
+        });
+    </script>
+</body>
+</html>

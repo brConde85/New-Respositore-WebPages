@@ -1,0 +1,119 @@
+		body{
+			background-color: lightgray;
+			font-family: Verdana, sans-serif;
+			color: white;
+			margin: 0;
+		}
+
+
+
+		.head{
+			background-image: url(../Imagens/thumbs/bg-3.jpg);
+			height: 500px;
+			/*Alinha a direita e no centro*/
+			background-position: right center;
+			/*Sempre ocupa uma area inteira msm cortando um pedaço da imagem*/
+			background-size: cover;
+		}
+
+		.head li{
+			list-style: none;
+			margin: 8px;
+			border:2px solid white;
+			color: white;
+			background-color: transparent;
+		}
+			.head li:hover{
+				background-color: rgba(105,105,105,0.3);
+
+			}
+
+		.head a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			padding: 15px;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 1px;
+		}
+
+		.subtitulo{
+			border-style: double;
+			border-color: white;
+			border-width: 2px;
+			text-align: center;
+			padding: 12px;
+			display: inline-block;
+			margin: 20px 520px;
+			background-color: #4F4F4F;
+		}
+
+		.head nav ul li{
+			list-style-type: none;
+			float: right;
+		}
+
+		.head-content{
+			color: white;
+			text-align: center;
+		}
+
+		.head-content h1{
+			font-size: 70px;
+			margin-top: 20px;
+			padding-top: 15%;
+			text-shadow: 3px 3px 3px #4F4F4F;
+			text-transform: uppercase;
+		}
+
+		main{
+			width: 80%;
+			margin: auto;
+		}
+		table tr td{
+			padding: 15px 30px;
+		}
+		.content-section{
+			background-color: white;
+			margin-top: 15px;
+		}
+
+		.content-section p{
+			margin-top:-3px;
+			margin-right: 0;
+			padding: 8px 4px;
+			background-color: #4F4F4F;
+			text-align: center;
+		}
+		.content-section2{
+			background-color: white;
+			padding: 10px;
+		}
+
+		.content-section2 p, h2{
+			margin: 5px 5px;
+			padding: 8px 8px 2px;
+			color:black;
+		}
+
+		.content-section2 h2{
+			background-color: lightgray;
+			border-bottom-color:silver;
+			border-bottom-width: 2px;
+			border-bottom-style: solid;
+		}
+
+		.content-section2 p{
+			margin: 10px;
+		}
+
+		footer{
+			text-align: center;
+			text-shadow: 3px 3px 3px black;
+			background-color: #4F4F4F;
+			padding: 25px;
+			margin-top: 10px;
+			height: 50px;
+			line-height: 30px;
+		}

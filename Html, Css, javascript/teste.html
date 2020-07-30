@@ -1,0 +1,102 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="author" content="Bruno">
+        <meta name="description" content="HTML, CSS, e muito mais sobre tecnologia">
+        <meta name="keywords" content="HTML, CSS, grid layout">
+        <title>teste</title>
+        <style>
+          
+        </style>
+    </head>
+    <body>
+        
+           <table id="example" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Garrett Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                </tr>
+      </tbody>
+    </table>
+       
+    </body>
+</html> 
+           
+   
+<script src="~/js/dataTables/jquery.dataTables.min.js"></script>
+<script src="~/js/sweetalert.min.js"></script>
+<script src="~/js/dataTables/dataTables.buttons.min.js"></script>
+<script src="~/js/dataTables/buttons.flash.min.js"></script>
+<script src="~/js/dataTables/jszip.min.js"></script>
+<script src="~/js/dataTables/pdfmake.min.js"></script>
+<script src="~/js/dataTables/vfs_fonts.js"></script>
+<script src="~/js/dataTables/buttons.html5.min.js"></script>
+<script src="~/js/dataTables/buttons.print.min.js"></script>
+<script src="~/js/dataTables/colvis.js"></script>
+<script type="text/javascript">
+    $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'print',
+                    text: 'ButtonLabelHere',
+                    title: 'Datatables example: Customisation of the print view window',
+                    customize: function ( win ) {
+                        $(win.document.body)
+                            .css( 'font-size', '10pt' )
+                            .prepend(
+                                '<img src="http://datatables.net/media/images/logo-fade.png" style="position:absolute; top:0; left:0;" />'
+                            );
+
+                        $(win.document.body).find( 'table' )
+                            .addClass( 'compact' )
+                            .css( 'font-size', 'inherit' );
+                    }
+                }
+            ]
+    });
+</script>
+<!--
+**External code:**
+
+//code.jquery.com/jquery-1.12.4.js
+https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js
+https://cdn.datatables.net/buttons/1.4.0/js/dataTables.buttons.min.js
+//cdn.datatables.net/buttons/1.4.0/js/buttons.print.min.js
+
+https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css
+https://cdn.datatables.net/buttons/1.4.0/css/buttons.dataTables.min.css-->

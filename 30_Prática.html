@@ -1,0 +1,77 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+    <title>30 - Prática</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bruno">
+    <meta name="description" content="Contém como conteúdo: css, seletores compostos, html, tecnologia">
+    <meta name="keywords" content="css, html, seletores compostos, pseudo-elementos e classes">
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        a[target="_blank"]:after{
+            content:url(imagens/neWin.png);
+            display: inline-block;
+            margin: 5px;
+        }
+        a[href$=".pdf"]:before{
+            content:url(imagens/pdf.jfif);
+        }
+
+        .chk{
+            display: inline-block;
+            border: 2px solid #777777 ;
+            border-radius: 5px;
+            background-color: rgba(204, 204, 204, 0.54);
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+
+        }
+
+        input[type="checkbox"]{
+            width: 1;
+            height: 1;
+            margin: 0;
+            display:inline-block;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        input[type="checkbox"]:checked + label .chk{
+            background-color: #666;
+            position: relative;
+        }
+
+        input[type="checkbox"]:checked + label .chk:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: 3.5px;
+            left: 2px;
+            border: solid white 2px;
+            transform: rotate(45deg);
+            border-top-color: transparent;
+            border-left-color: transparent;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+      <h1>Prática Html</h1>
+      <a href="http://serfrontend.com" target="_blank">link externo</a>
+      <a href="qq.pdf">link interno</a>
+
+      <hr>
+
+      <input type="checkbox" name="qq" id="chk">
+      <label for="chk"><span class="chk"></span>Li e aceito o contrato</label>
+      <br>
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE Html>
+<html lang="pt-br">
+    <head>
+        <title>24 - Seletores Compostos</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="Contém css, seletores compostos, html, tecnologia">
+        <meta name="keywords" content="css, html, seletores compostos">
+    </head>
+    <body>
+       <style>
+           /*selecionando um article caso ele seja o primeiros filho
+           e definindo uma cora para o <a>*/
+           article:nth-child(1) a{
+               color: red;
+           }
+           /*selecionando o article seja terceiro filho e definindo
+           uma cor para <p> caso ele tenha descendência direta de article*/
+           article:nth-child(3) > p{
+               color:aqua;
+               background: silver;
+           }
+
+           article:nth-child(5) h3 + p{
+               color:blueviolet;
+               shape-margin: 40px;
+           }
+
+           /*Todos os irmãos depois de h3 que sejam <p>*/
+           article:nth-child(7) h3 ~ p{
+               color:orange;
+               background: gray;
+           }
+
+           article:nth-child(9) > p:nth-child(3){
+               color:green;
+               border-bottom: 2px green dashed;
+               border-width: 5px;
+               border-radius: 10px;
+           }
+
+           .destaque{
+               background: yellow;
+           }
+           /*todos os articles com a cor de fonte laranja exceto*/
+           article:not(.destaque){
+               color: orangered;
+           }
+           /*pega o atributo com o valor igual...*/
+           a[href="#"]{
+                opacity: .4;
+           }
+           a[title]{
+               color:darkgreen;
+           }
+           /*"^" pega o elemento que inicia com...*/
+           a[href^="http:"]{
+               color: #a7ff00;
+               background: black;
+               display: block;
+           }
+           /*"$" pega o elemento que termina com...*/
+           a[href$="html"]{
+               color:aqua;
+               background: rgba(255, 0, 0, 0.76);
+               display: block;
+           }
+        </style>
+        <header>
+
+        </header>
+        <main>
+            <article>
+                <h3>Seletores Compostos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    </article>
+
+                <hr>
+
+                <article>
+                <h3>Seletores Compostos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                </article>
+
+                <hr>
+
+                <article>
+                <h3>Seletores Compostos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                </article>
+
+                <hr>
+
+                <article>
+                <h3>Seletores Compostos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                </article>
+
+                <hr>
+
+                <article>
+                <h3>Seletores Compostos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                </article><hr>
+
+                <article class="destaque">
+                <h3>Seletores Compostos com atributos</h3>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                    <p>Aqui possuímos uma parágrafo <a href="#">com um <b>link</b></a></p>
+                </article>
+
+                <ul>
+                    <li><a href="#">link falso</a></li>
+                    <li><a href="#">link falso</a></li>
+                    <li><a href="#" title="veja o exercício anterior">link falso</a></li>
+                    <li><a href="http://serfrontend.com" target="_blank">link externo</a></li>
+                    <li><a href="15_table.html" target="_blank" >link interno</a></li>
+                </ul>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

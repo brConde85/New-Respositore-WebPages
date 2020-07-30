@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	<button onclick="iniciarCalculo()">Calcular</button>
+	<div id="output"></div>
+	
+	<script>
+//      alert("Olá Mundo!");
+//      var nome = prompt("Qual é seu nome?");
+//      alert("Bem-Vindo, " + nome);
+        
+        
+//        escreve(msg);
+        
+        function escreve(msg){
+            document.querySelector("#output").innerHTML = msg;
+        }
+        
+        function iniciarCalculo(){
+            var base = parseFloat(prompt("Informe a base do retângulo:"));
+            var altura = parseFloat(prompt("Informe a altura do retângulo"));
+            
+            try{
+                var msg = Calcular(base, altura);               
+            }catch(e){
+                alert(e);
+                return;
+            }
+            escreve('A area do retangulo, output: '+msg);
+            alert('A area do retangulo: '+ msg);
+        }
+        
+        
+        function Calcular(x,y){
+            if(isNaN(x) || isNaN(y)){
+                throw new Error('Informe um numero válido!');                
+            }
+            var total = x * y;
+                return total;            
+        }
+        
+        
+    </script>
+</body>
+</html>

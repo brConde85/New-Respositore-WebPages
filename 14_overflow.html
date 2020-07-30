@@ -1,0 +1,56 @@
+<!Doctype hml>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Bruno">
+        <meta name="description" content="definições do overflow">
+        <meta name="keywords" content="html, css, overflow">
+        <style>
+            div{
+                display: inline-block;
+                padding: 2%;
+                margin: 2%;
+                border: 1px solid black;
+                width: 16.2%;
+                height: 180px;
+                font-family: sans-serif;
+                font-size: 18px;
+            }
+
+            .div1{
+                overflow: visible;
+            }
+
+            .div2{
+                overflow: hidden;
+            }
+
+            .div3{
+                overflow: inherit;
+            }
+
+            .div4{
+                overflow: scroll;
+            }
+
+            h1{
+                text-align: auto;
+            }
+        </style>
+    </head>
+    <body>
+       <h1>Lorem</h1>
+        <div class="div1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt deserunt deleniti culpa unde, voluptatum aspernatur totam, nobis eveniet quaerat velit tempora odio numquam saepe cumque dolores. Officiis earum sit eligendi.</p>
+        </div>
+        <div class="div2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cum delectus reiciendis, deleniti debitis odit iusto blanditiis quod nulla alias et sapiente quae reprehenderit! Tempore numquam fuga cum alias eaque.</p>
+        </div>
+        <div class="div3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati eius minus itaque amet ipsam corporis temporibus, dolorum adipisci distinctio perferendis eum, odio recusandae magnam alias eveniet aspernatur! Commodi, sed, rerum!</p>
+        </div>
+        <div class="div4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quas sunt deleniti nobis distinctio quos maiores placeat quae, aliquam quod porro dolor, nemo excepturi repudiandae delectus. Iste recusandae eveniet officia.</p>
+        </div>
+    </body>
+</html>

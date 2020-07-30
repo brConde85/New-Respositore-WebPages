@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lógica de Programação Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Lógica de Programação Javascript</h1>
+	
+	
+	<script>
+        var arr = new Array(25,30,45,28,0,12,78,64,'opa','aew','test');
+        var cont = 0;
+        var soma = 0;
+        for(var i = 0; i < arr.length; i++){
+            if (!isNaN(arr[i]) && arr[i] % 2 == 0){
+                cont ++;
+                soma += arr[i];
+            }
+        }
+        alert("Existem " + cont + " números pares. Soma dos pares = " + soma);
+        
+    </script>
+</body>
+</html>
