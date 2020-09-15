@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Programação com Javascript</h1>
+
+
+        <script>
+            // o nome da função é opcional, entre parenteses é passado os
+            // argumentos da função caso haja
+
+            // exemplo de função literal
+            function somar(n1, n2){
+                // corpo da função
+                return n1 + n2;
+            }
+            // pode-se atribuir uma strng a fubção por ela de primaria classe
+            somar.leitura = 'Muita calma nessa hora';
+            console.log('tamanho da string: ' + somar.leitura.length);
+            console.log(somar.leitura);
+
+            var resultado = somar(120,20);
+            console.log('Resultado: ', resultado);
+
+            // função hononima(sem nome), por estar atrelandio a função ao uma
+            // variável e necessário que ao final das chaves seja inserido ";"
+            var teste = function(str){
+                console.log('Ola', str);
+            };
+            teste('mundo!');
+
+
+            // passando uma função por parâmetro
+            var teste2 = function(f){
+                f();
+            };
+
+            teste2(function(){
+               console.log('funcao passada por parametro.');
+            });
+
+            console.log('-------------------');
+
+            var x = 0;
+
+            function mostraX(){
+                //por ter escopo local não conflita com a variavel acima apesar do nome
+                var x = 10;
+                console.log('mostra x: ', x);
+            }
+            mostraX();
+            console.log('mostra x: ', x);
+
+            // Exemplo de uma função auto-invocável (IFEE) para ser iniciada automaticamente
+            (function(){
+                // para evitar que variaveis possam ser criadas sem o uso da do "var" sujando
+                // o escopo gloval do código basta digitar a string a baixo.
+                'use strict';
+                var isValid = true;
+                console.log(isValid);
+
+                function somar(arr){
+                    // mostra o indice juntamente com seus valores
+                    console.log(arguments);
+
+                    var resultado = 0;
+                    var i = 0;
+                    while (arguments[i]){
+                        resultado += arguments[i];
+                        i++;
+                    }
+                    console.log('A soma é: ' + resultado);
+                }
+
+                somar(10,30,50,5,5);
+            })();
+
+        </script>
+    </body>
+</html>

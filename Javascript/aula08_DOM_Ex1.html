@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Programação Javascript</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Programação com Javascript DOM</h1>
+    <p id="paragrafo">Olá</p>
+
+    <script>
+        (function(){
+            var nome = prompt("Informe seu nome: ");
+            document.getElementById('paragrafo').innerHTML = 'Bem vindo, <b>'+ nome + '</b>';
+            document.querySelector('h1').textContent = 'Javascript DOM';
+        })();
+    </script>
+</body>
+
+</html>

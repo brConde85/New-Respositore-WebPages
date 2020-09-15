@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Programação Javascript</title>
+    <meta charset="utf-8"> 
+</head>
+
+<body>
+    <h1>Programação com Javascript DOM</h1>
+    <input id="input" type="text" value="nome completo">
+    <button onclick="desabilitar()">Desabilitar input</button>
+    <button onclick="habilitar()">Habilitar input</button>
+    <script>
+        var nome = prompt('Informe seu nome:');
+        var sobrenome = prompt('Informe seu sobrenome:');
+        
+        document.getElementById('input').value = nome +' '+ sobrenome;
+        
+        function desabilitar(){
+            document.getElementById('input').disabled = true;
+        }
+        
+        function habilitar(){
+            document.getElementById('input').disabled = false;
+        }
+        
+    </script>
+</body>
+
+</html>

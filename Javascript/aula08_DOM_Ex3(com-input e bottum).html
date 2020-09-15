@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Programação Javascript</title>
+    <meta charset="utf-8"> 
+</head>
+
+<body>
+    <h1>Programação com Javascript DOM</h1>
+    <div id="paragrafo">Olá</div>   
+    <input type="text" id="txtNome" value="Digite seu nome">
+    <div id="msg2"></div>
+    <button onclick="escreve()">Click aqui</button>
+    <div id="msg" class="msg"></div>
+    <script>
+        var texto;
+        
+            var nome = prompt('Informe seu nome: ');
+            document.getElementById('txtNome').value = nome;            
+            var exibir = document.getElementById('txtNome').value;
+            document.querySelector('#msg').textContent = 'É isso ai ' + exibir;
+            function escreve(){
+                var escreve = document.getElementById('txtNome').value;
+                document.getElementsByClassName('msg')[0].innerHTML = 'Que isso cara seu nome em negrito: <br> <b>'+ escreve + '</b>';
+            }
+        
+    </script>
+</body>
+
+</html>
