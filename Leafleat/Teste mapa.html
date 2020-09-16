@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <title>Starter Template · Bootstrap</title>
+    <title> Template · Leafleat</title>
 
     <!--Template based on URL below-->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
@@ -18,23 +18,30 @@
     <!-- Place your stylesheet here-->
     <link href="/css/stylesheet.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" crossorigin="" />
 
-<body>
     <style>
         html,
         body {
             height: 100%;
         }
 
-        #map {
-            height: 100%;
+        #mapDIV {
+            border: solid 1px gray;
+            border-radius: 5px;
+            height: 90%;
+            margin-top: 3.3em;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
-
     </style>
+    <script src="GeoJson.geojson"></script>
+</head>
 
-    <div id="map"></div>
+<body>
+    <div id='mapDIV'></div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -42,33 +49,47 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""></script>
+    <script src="~/Leafleat/GeoJson.js" type="application/javascript"></script>
     <script>
-        (function() {
-            // center of the map
-            var center = [-20.5932, -45.4730];
+       var map = L.map(document.getElementById('mapDIV'), {
+    center: [62.7, -144.0],
+    zoom: 6
+});
 
-            // Create the map
-            var map = L.map('map').setView(center, 5);
+// Base maps
+var basetopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/WMTS/tile/1.0.0/USGSTopo/default/default028mm/{z}/{y}/{x}.png', {});
+var baserelief = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png', {});
 
-            // Set up the OSM layer
-            L.tileLayer(
-                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Data © <a href="http://osm.org/copyright">OpenStreetMap</a>',
-                    maxZoom: 18
-                }).addTo(map);
+basetopo.addTo(map);
 
-            // add a marker in the given location
-            L.marker(center).addTo(map);
-            L.marker([-20.5932, -45.4730]).addTo(map);
+// The trail
+var thetrail = L.geoJSON(trail, {
+    color: '#800000',
+    weight: 3,
+    dashArray: '12 8 12',
+});
 
-            var imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Sydney_Opera_House_-_Dec_2008.jpg/1024px-Sydney_Opera_House_-_Dec_2008.jpg',
-                imageBounds = [center, [-21.5932, -43.4730]];
+thetrail.bindTooltip('The Valdez-Eagle Trail')
+thetrail.addTo(map);
 
-            L.imageOverlay(imageUrl, imageBounds).addTo(map);
-        })();
+var baselayers = {
+    'Shaded Relief': baserelief,
+    'National Map topo': basetopo
+};
+var overlays = {
+    'The Trail': thetrail
+};
+L.control.layers(baselayers, overlays).addTo(map);
 
+// Add scalebar
+
+var scale = L.control.scale()
+scale.addTo(map)
+
+// Add attribution
+map.attributionControl.addAttribution('National Map Topo');
+map.attributionControl.addAttribution('OpenTopoMap');           
+        
     </script>
-</body>
-
-</html>
+</body></html>
